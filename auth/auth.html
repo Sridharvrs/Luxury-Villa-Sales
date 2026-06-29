@@ -1,0 +1,75 @@
+<!-- AUTH MODAL -->
+<div class="auth-modal hidden" id="authModal">
+
+  <div class="auth-box">
+
+    <button class="auth-close" id="authClose">×</button>
+
+    <!-- Tabs -->
+    <div class="auth-tabs">
+      <button class="tab active" data-tab="login">Login</button>
+      <button class="tab" data-tab="signup">Sign Up</button>
+    </div>
+
+    <!-- LOGIN -->
+    <div class="auth-form active" id="login">
+
+      <h2>Welcome Back</h2>
+
+      <input type="email" placeholder="Email" id="loginEmail">
+
+      <div class="password-field">
+        <input type="password" placeholder="Password" id="loginPassword">
+        <span class="eye" data-eye="loginPassword">👁</span>
+      </div>
+
+      <select id="loginRole">
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <div class="password-hint" id="loginHint"></div>
+
+      <div class="row">
+        <label><input type="checkbox"> Remember me</label>
+        <a href="#">Forgot Password?</a>
+      </div>
+
+      <button class="btn-auth">Login</button>
+
+      <div class="divider">OR</div>
+      <button class="google-btn">Continue with Google</button>
+
+    </div>
+
+    <!-- SIGNUP -->
+    <div class="auth-form" id="signup">
+
+      <h2>Create Account</h2>
+
+      <input type="text" placeholder="Full Name" id="signupName">
+      <input type="email" placeholder="Email" id="signupEmail">
+
+      <div class="password-field">
+        <input type="password" placeholder="Password" id="signupPassword">
+        <span class="eye" data-eye="signupPassword">👁</span>
+      </div>
+
+      <div class="password-field">
+        <input type="password" placeholder="Confirm Password" id="signupConfirm">
+        <span class="eye" data-eye="signupConfirm">👁</span>
+      </div>
+
+      <select id="signupRole">
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <div class="password-hint" id="signupHint"></div>
+
+      <button class="btn-auth">Sign Up</button>
+
+    </div>
+
+  </div>
+</div>

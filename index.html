@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Villas | Luxury Residences</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="auth/auth.css">
+
+</head>
+<body>
+
+    <div id="auth-container"></div>
+
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <svg class="loader-logo" viewBox="0 0 50 50">
+                <circle class="emblem-outer" cx="25" cy="25" r="23"/>
+                <circle class="emblem-inner" cx="25" cy="25" r="8"/>
+                <polygon class="emblem-diamond" points="25,5 45,25 25,45 5,25"/>
+            </svg>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <div class="logo-emblem">
+                    <svg viewBox="0 0 50 50">
+                        <circle class="emblem-outer" cx="25" cy="25" r="23"/>
+                        <circle class="emblem-inner" cx="25" cy="25" r="8"/>
+                        <polygon class="emblem-diamond" points="25,5 45,25 25,45 5,25"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="brand">Stackly</span>
+                    <span class="tagline">Luxury Villas</span>
+                </div>
+            </a>
+
+            <div class="nav-orbital">
+                <ul class="nav-links">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">
+                            Home
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="villas.html" class="nav-link">
+                            Villas
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">
+                            About
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">
+                            Services
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">
+                            Contact
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                </ul>
+
+                <a href="#" class="nav-cta" onclick="openAuth()">
+                    <span>Book Viewing</span>
+                    <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-video-container">
+                <video class="hero-video" autoplay muted loop playsinline>
+                    <source src="[assets.mixkit.co](https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-beautiful-beach-with-rocks-48823-large.mp4)" type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+            </div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="float-shape shape-1"></div>
+            <div class="float-shape shape-2"></div>
+            <div class="float-shape shape-3"></div>
+            <div class="float-ring ring-1"></div>
+            <div class="float-ring ring-2"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-line"></span>
+                <span class="badge-text">Since 1987</span>
+                <span class="badge-line"></span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="title-line">
+                    <span class="title-word">Discover</span>
+                </span>
+                <span class="title-line">
+                    <span class="title-word">Extraordinary</span>
+                </span>
+                <span class="title-line accent">
+                    <span class="title-word">Living</span>
+                </span>
+            </h1>
+
+            <p class="hero-description">
+                Curating the world's most exceptional villas for discerning individuals 
+                who appreciate architectural mastery and unparalleled luxury.
+            </p>
+
+            <div class="hero-actions">
+                <a href="villas.html" class="btn btn-primary">
+                    <span>Explore Collection</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="about.html" class="btn btn-outline">
+                    <span>Our Story</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Side Stats -->
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number" data-count="350">0</span>
+                <span class="stat-label">Luxury Villas</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" data-count="28">0</span>
+                <span class="stat-label">Countries</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" data-count="37">0</span>
+                <span class="stat-label">Years Excellence</span>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll</span>
+            <div class="scroll-line">
+                <span class="scroll-dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Villas Section -->
+    <section class="featured-section section">
+        <div class="section-header reveal">
+            <span class="section-subtitle">Handpicked Selection</span>
+            <h2 class="section-title">Featured <span>Estates</span></h2>
+        </div>
+
+        <div class="featured-grid">
+            <article class="featured-card featured-large reveal">
+                <div class="card-image">
+                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200)" alt="Villa Serenità">
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="card-content">
+                    <span class="card-location">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Amalfi Coast, Italy
+                    </span>
+                    <h3 class="card-title">Villa Serenità</h3>
+                    <p class="card-description">A breathtaking cliffside masterpiece with panoramic Mediterranean views</p>
+                    <div class="card-details">
+                        <span class="detail"><strong>6</strong> Bedrooms</span>
+                        <span class="detail"><strong>8</strong> Bathrooms</span>
+                        <span class="detail"><strong>12,500</strong> sq ft</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-price">€24,500,000</span>
+                        <a href="villas.html" class="card-link">View Details</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="featured-card reveal">
+                <div class="card-image">
+                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800)" alt="Château Lumière">
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="card-content">
+                    <span class="card-location">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        French Riviera, France
+                    </span>
+                    <h3 class="card-title">Château Lumière</h3>
+                    <div class="card-details">
+                        <span class="detail"><strong>8</strong> Beds</span>
+                        <span class="detail"><strong>15,000</strong> sq ft</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-price">€35,000,000</span>
+                        <a href="villas.html" class="card-link">View</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="featured-card reveal">
+                <div class="card-image">
+                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800)" alt="Casa del Mar">
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="card-content">
+                    <span class="card-location">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Marbella, Spain
+                    </span>
+                    <h3 class="card-title">Casa del Mar</h3>
+                    <div class="card-details">
+                        <span class="detail"><strong>5</strong> Beds</span>
+                        <span class="detail"><strong>9,800</strong> sq ft</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-price">€18,900,000</span>
+                        <a href="villas.html" class="card-link">View</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="featured-cta reveal">
+            <a href="villas.html" class="btn btn-outline">
+                <span>View All Properties</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+<!-- ==========================================
+   LIFESTYLE GALLERY
+========================================== -->
+
+<section class="lifestyle-section section">
+
+    <div class="section-header reveal">
+        <span class="section-subtitle">Luxury Lifestyle</span>
+        <h2 class="section-title">
+            Beyond <span>The Villa</span>
+        </h2>
+
+        <p class="lifestyle-description">
+            Experience a world where every sunrise, every evening,
+            and every detail reflects timeless elegance.
+        </p>
+    </div>
+
+    <div class="lifestyle-grid">
+
+        <div class="lifestyle-card large reveal">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200" alt="">
+            <div class="lifestyle-overlay">
+                <span>Luxury Interior</span>
+            </div>
+        </div>
+
+        <div class="lifestyle-card reveal">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800" alt="">
+            <div class="lifestyle-overlay">
+                <span>Infinity Pool</span>
+            </div>
+        </div>
+
+        <div class="lifestyle-card reveal">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800" alt="">
+            <div class="lifestyle-overlay">
+                <span>Private Lounge</span>
+            </div>
+        </div>
+
+        <div class="lifestyle-card reveal">
+            <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=800" alt="">
+            <div class="lifestyle-overlay">
+                <span>Luxury Dining</span>
+            </div>
+        </div>
+
+        <div class="lifestyle-card reveal">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800" alt="">
+            <div class="lifestyle-overlay">
+                <span>Home Spa</span>
+            </div>
+        </div>
+
+        <div class="lifestyle-card large reveal">
+            <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200" alt="">
+            <div class="lifestyle-overlay">
+                <span>Ocean View</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Experience Section -->
+    <section class="experience-section">
+        <div class="experience-visual">
+            <div class="experience-image-wrapper">
+                <img src="[images.unsplash.com](https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=1200)" alt="Luxury Interior" class="experience-image">
+            </div>
+            <div class="experience-floating-card">
+                <span class="floating-number">25+</span>
+                <span class="floating-text">Award-Winning<br>Architects</span>
+            </div>
+        </div>
+
+        <div class="experience-content">
+            <span class="section-subtitle reveal-left">Why Choose Us</span>
+            <h2 class="section-title reveal-left">Crafting <span>Dreams</span><br>Into Reality</h2>
+            
+            <p class="experience-text reveal-left">
+                For over three decades, Stackly has been the trusted name for high-net-worth 
+                individuals seeking extraordinary properties. Our curated collection represents 
+                the pinnacle of architectural achievement and luxurious living.
+            </p>
+
+            <div class="experience-features">
+                <div class="feature-item reveal-left">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Verified Properties</h4>
+                        <p>Every estate undergoes rigorous verification and quality assessment</p>
+                    </div>
+                </div>
+
+                <div class="feature-item reveal-left">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h4>24/7 Concierge</h4>
+                        <p>Dedicated support throughout your property journey</p>
+                    </div>
+                </div>
+
+                <div class="feature-item reveal-left">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="7.5 4.21 12 6.81 16.5 4.21"/>
+                            <polyline points="7.5 19.79 7.5 14.6 3 12"/>
+                            <polyline points="21 12 16.5 14.6 16.5 19.79"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Global Network</h4>
+                        <p>Access to off-market properties worldwide</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="services.html" class="btn btn-primary reveal-left">
+                <span>Our Services</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section section">
+        <div class="section-header reveal">
+            <span class="section-subtitle">Client Stories</span>
+            <h2 class="section-title">Words of <span>Trust</span></h2>
+        </div>
+
+        <div class="testimonials-slider">
+            <div class="testimonial-track">
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">
+                        "Stackly transformed our vision into reality. Their attention to detail 
+                        and understanding of our needs was exceptional. We found our dream home 
+                        on the Amalfi Coast."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100)" alt="James Morrison">
+                        <div class="author-info">
+                            <strong>James Morrison</strong>
+                            <span>CEO, Morrison Holdings</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">
+                        "The level of service provided by Stackly is unmatched. From the first 
+                        viewing to closing, everything was handled with utmost professionalism 
+                        and discretion."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100)" alt="Elena Petrov">
+                        <div class="author-info">
+                            <strong>Elena Petrov</strong>
+                            <span>Art Collector, Geneva</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">
+                        "Working with Stackly was a pleasure from start to finish. They found us 
+                        a property that exceeded all our expectations in the French Riviera."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100)" alt="Marcus Chen">
+                        <div class="author-info">
+                            <strong>Marcus Chen</strong>
+                            <span>Tech Entrepreneur</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-controls">
+                <button class="control-btn prev" aria-label="Previous">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <div class="testimonial-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="control-btn next" aria-label="Next">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-background">
+            <img src="[images.unsplash.com](https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600)" alt="Luxury Villa">
+            <div class="cta-overlay"></div>
+        </div>
+        <div class="cta-content reveal">
+            <h2 class="cta-title">Begin Your Journey<br>To <span>Extraordinary</span></h2>
+            <p class="cta-text">
+                Schedule a private consultation with our luxury property specialists
+            </p>
+            <a href="contact.html" class="btn btn-primary">
+                <span>Schedule Consultation</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+<!-- ==========================================
+     LUXURY STATISTICS
+========================================== -->
+
+<section class="luxury-stats section">
+
+    <div class="section-header reveal">
+        <span class="section-subtitle">Our Achievements</span>
+        <h2 class="section-title">
+            Excellence <span>In Numbers</span>
+        </h2>
+
+        <p class="stats-description">
+            Every number reflects our commitment to delivering exceptional
+            luxury living experiences around the world.
+        </p>
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stats-card reveal">
+            <div class="stats-icon">🏡</div>
+            <h3 class="stat-number" data-count="350">0</h3>
+            <p>Luxury Villas Sold</p>
+        </div>
+
+        <div class="stats-card reveal">
+            <div class="stats-icon">🌍</div>
+            <h3 class="stat-number" data-count="28">0</h3>
+            <p>Countries Covered</p>
+        </div>
+
+        <div class="stats-card reveal">
+            <div class="stats-icon">⭐</div>
+            <h3 class="stat-number" data-count="98">0</h3>
+            <p>Client Satisfaction %</p>
+        </div>
+
+        <div class="stats-card reveal">
+            <div class="stats-icon">🏆</div>
+            <h3 class="stat-number" data-count="37">0</h3>
+            <p>Years of Excellence</p>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <svg class="footer-logo-emblem" viewBox="0 0 50 50">
+                        <circle class="emblem-outer" cx="25" cy="25" r="23" fill="none" stroke="#c9a962" stroke-width="1.5"/>
+                        <circle class="emblem-inner" cx="25" cy="25" r="8" fill="#c9a962"/>
+                        <polygon class="emblem-diamond" points="25,5 45,25 25,45 5,25" fill="none" stroke="#c9a962" stroke-width="1"/>
+                    </svg>
+                    <span class="footer-logo-text">Stackly</span>
+                </div>
+                <p class="footer-description">
+                    Curating the world's most exceptional luxury villas and estates 
+                    for discerning individuals since 1987.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="villas.html">Properties</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Destinations</h4>
+                <ul class="footer-links">
+                    <li><a href="#">French Riviera</a></li>
+                    <li><a href="#">Italian Coast</a></li>
+                    <li><a href="#">Greek Islands</a></li>
+                    <li><a href="#">Caribbean</a></li>
+                    <li><a href="#">Dubai</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li>42 Avenue Montaigne</li>
+                    <li>75008 Paris, France</li>
+                    <li><a href="tel:+33142686868">+33 1 42 68 68 68</a></li>
+                    <li><a href="mailto:contact@elysee-villas.com">contact@elysee-villas.com</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copyright">
+                © 2024 Stackly Villas. All rights reserved.
+            </p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <!-- Scripts -->
+
+    <script>
+        fetch("auth/auth.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("auth-container").innerHTML = html;
+  });
+    </script>
+
+    <script src="js/common.js"></script>
+    <script src="js/home.js"></script>
+    <script src="auth/auth.js" defer></script>
+</body>
+</html>

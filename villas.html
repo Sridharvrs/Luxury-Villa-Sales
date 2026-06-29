@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Villas Collection | Stackly</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/villas.css">
+    <link rel="stylesheet" href="auth/auth.css">
+    <script src="auth/auth.js" defer></script>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <svg class="loader-logo" viewBox="0 0 50 50">
+                <circle class="emblem-outer" cx="25" cy="25" r="23"/>
+                <circle class="emblem-inner" cx="25" cy="25" r="8"/>
+                <polygon class="emblem-diamond" points="25,5 45,25 25,45 5,25"/>
+            </svg>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <div class="logo-emblem">
+                    <svg viewBox="0 0 50 50">
+                        <circle class="emblem-outer" cx="25" cy="25" r="23"/>
+                        <circle class="emblem-inner" cx="25" cy="25" r="8"/>
+                        <polygon class="emblem-diamond" points="25,5 45,25 25,45 5,25"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="brand">Stackly</span>
+                    <span class="tagline">Luxury Villas</span>
+                </div>
+            </a>
+
+            <div class="nav-orbital">
+                <ul class="nav-links">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="villas.html" class="nav-link active">Villas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+
+                <a onclick="openAuth()" class="nav-cta">
+                    <span>Book Viewing</span>
+                    <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-pattern">
+            <div class="pattern-line"></div>
+            <div class="pattern-line"></div>
+            <div class="pattern-line"></div>
+            <div class="pattern-line"></div>
+            <div class="pattern-line"></div>
+        </div>
+        <div class="header-content">
+            <span class="header-subtitle">Our Collection</span>
+            <h1 class="header-title">Exceptional <span>Estates</span></h1>
+            <p class="header-description">
+                Discover our curated portfolio of the world's most extraordinary luxury villas
+            </p>
+        </div>
+    </section>
+
+<!-- ==========================================
+     FEATURED ESTATE
+========================================== -->
+
+<section class="featured-estate">
+
+    <div class="estate-background">
+        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1800" alt="Featured Estate">
+        <div class="estate-overlay"></div>
+    </div>
+
+    <div class="estate-content">
+
+        <span class="estate-label">
+            ★ Featured Estate of the Month
+        </span>
+
+        <h2 class="estate-title">
+            Villa <span>Imperium</span>
+        </h2>
+
+        <p class="estate-description">
+            Discover one of Europe's most prestigious oceanfront estates,
+            combining timeless architecture with breathtaking Mediterranean
+            views, private beach access, and world-class luxury amenities.
+        </p>
+
+        <div class="estate-specs">
+
+            <div class="estate-spec">
+                <h3>12</h3>
+                <span>Bedrooms</span>
+            </div>
+
+            <div class="estate-spec">
+                <h3>16</h3>
+                <span>Bathrooms</span>
+            </div>
+
+            <div class="estate-spec">
+                <h3>24,800</h3>
+                <span>Sq.ft</span>
+            </div>
+
+            <div class="estate-spec">
+                <h3>Private</h3>
+                <span>Beach</span>
+            </div>
+
+        </div>
+
+        <div class="estate-footer">
+
+            <div class="estate-price">
+
+                <small>Starting From</small>
+
+                <h3>€72,500,000</h3>
+
+            </div>
+
+            <div class="estate-buttons">
+
+                <a href="#" class="estate-btn primary">
+                    Explore Estate
+                </a>
+
+                <a href="#" class="estate-btn secondary">
+                    ▶ Watch Tour
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Filter Section -->
+    <!-- <section class="filter-section">
+        <div class="filter-container">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All Properties</button>
+                <button class="filter-tab" data-filter="coastal">Coastal</button>
+                <button class="filter-tab" data-filter="mountain">Mountain</button>
+                <button class="filter-tab" data-filter="urban">Urban</button>
+                <button class="filter-tab" data-filter="island">Island</button>
+            </div>
+
+            <div class="filter-options">
+                <div class="filter-dropdown">
+                    <button class="dropdown-trigger">
+                        <span>Price Range</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">All Prices</a>
+                        <a href="#" class="dropdown-item">€5M - €10M</a>
+                        <a href="#" class="dropdown-item">€10M - €25M</a>
+                        <a href="#" class="dropdown-item">€25M - €50M</a>
+                        <a href="#" class="dropdown-item">€50M+</a>
+                    </div>
+                </div>
+
+                <div class="filter-dropdown">
+                    <button class="dropdown-trigger">
+                        <span>Bedrooms</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Any</a>
+                        <a href="#" class="dropdown-item">3+ Bedrooms</a>
+                        <a href="#" class="dropdown-item">5+ Bedrooms</a>
+                        <a href="#" class="dropdown-item">8+ Bedrooms</a>
+                    </div>
+                </div>
+
+                <button class="view-toggle" aria-label="Toggle View">
+                    <svg class="grid-icon active" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"/>
+                        <rect x="14" y="3" width="7" height="7"/>
+                        <rect x="14" y="14" width="7" height="7"/>
+                        <rect x="3" y="14" width="7" height="7"/>
+                    </svg>
+                    <svg class="list-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section> -->
+
+<!--=====================================
+WHY INVEST WITH Stackly
+======================================-->
+
+<section class="invest-section section">
+
+    <div class="section-header">
+
+        <span class="section-subtitle">
+            Why Choose Stackly
+        </span>
+
+        <h2 class="section-title">
+            Why Invest With <span>Stackly</span>
+        </h2>
+
+        <p class="section-description">
+            We don't just sell luxury properties—we deliver exclusive
+            investments, exceptional lifestyles, and lifelong relationships.
+        </p>
+
+    </div>
+
+    <div class="invest-grid">
+
+        <div class="invest-card">
+            <div class="invest-icon">🏆</div>
+            <h3>Exclusive Listings</h3>
+            <p>
+                Access prestigious villas unavailable on the public market.
+            </p>
+        </div>
+
+        <div class="invest-card">
+            <div class="invest-icon">🌍</div>
+            <h3>Global Portfolio</h3>
+            <p>
+                Premium estates across Europe, the Middle East, Asia, and America.
+            </p>
+        </div>
+
+        <div class="invest-card">
+            <div class="invest-icon">📈</div>
+            <h3>Investment Growth</h3>
+            <p>
+                Carefully selected properties with exceptional appreciation potential.
+            </p>
+        </div>
+
+        <div class="invest-card">
+            <div class="invest-icon">⚖️</div>
+            <h3>Legal Assistance</h3>
+            <p>
+                Complete legal support from reservation to ownership transfer.
+            </p>
+        </div>
+
+        <div class="invest-card">
+            <div class="invest-icon">🛎️</div>
+            <h3>Private Concierge</h3>
+            <p>
+                Dedicated concierge services for travel, relocation, and lifestyle.
+            </p>
+        </div>
+
+        <div class="invest-card">
+            <div class="invest-icon">🔒</div>
+            <h3>Complete Privacy</h3>
+            <p>
+                Every transaction is handled with complete discretion and confidentiality.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Villas Masonry Grid -->
+    <section class="villas-section section">
+        <div class="masonry-grid">
+            <!-- Villa 1 - Large -->
+            <article class="villa-card size-large" data-category="coastal">
+                <div class="villa-image">
+                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200)" alt="Villa Serenità">
+                    <div class="villa-overlay"></div>
+                    <div class="villa-badge">Featured</div>
+                    <button class="villa-favorite" aria-label="Add to favorites">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="villa-content">
+                    <div class="villa-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>Amalfi Coast, Italy</span>
+                    </div>
+                    <h3 class="villa-title">Villa Serenità</h3>
+                    <p class="villa-description">
+                        A breathtaking cliffside masterpiece with panoramic Mediterranean views, 
+                        featuring world-class amenities and timeless Italian architecture.
+                    </p>
+                    <div class="villa-specs">
+                        <div class="spec">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                            </svg>
+                            <span>6 Beds</span>
+                        </div>
+                        <div class="spec">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 22V4c0-.5.2-1 .6-1.4C5 2.2 5.5 2 6 2h12c.5 0 1 .2 1.4.6.4.4.6.9.6 1.4v18l-4-2-4 2-4-2-4 2z"/>
+                            </svg>
+                            <span>8 Baths</span>
+                        </div>
+                        <div class="spec">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M3 9h18"/>
+                            </svg>
+                            <span>12,500 sqft</span>
+                        </div>
+                    </div>
+                    <div class="villa-footer">
+                        <span class="villa-price">€24,500,000</span>
+                        <a href="#" class="villa-link">
+                            <span>View Details</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Villa 2 - Medium -->
+            <article class="villa-card size-medium" data-category="coastal">
+                <div class="villa-image">
+                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800)" alt="Château Lumière">
+                    <div class="villa-overlay"></div>
+                    <button class="villa-favorite" aria-label="Add to favorites">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="villa-content">
+                    <div class="villa-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>French Riviera, France</span>
+                    </div>
+                    <h3 class="villa-title">Château Lumière</h3>
+                    <div class="villa-specs">
+                        <div class="spec"><span>8 Beds</span></div>
+                        <div class="spec"><span>10 Baths</span></div>
+                        <div class="spec"><span>15,000 sqft</span></div>
+                    </div>
+                    <div class="villa-footer">
+                        <span class="villa-price">€35,000,000</span>
+                        <a href="#" class="villa-link">View</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Villa 3 - Small -->
+            <article class="villa-card size-small" data-category="mountain">
+                <div class="villa-image">
+                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600)" alt="Alpine Retreat">
+                    <div class="villa-overlay"></div>
+                    <button class="villa-favorite" aria-label="Add to favorites">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="villa-content">
+                    <div class="villa-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>Gstaad, Switzerland</span>
+                    </div>
+                    <h3 class="villa-title">Alpine Retreat</h3>
+                    <div class="villa-specs">
+                        <div class="spec"><span>5 Beds</span></div>
+                        <div class="spec"><span>8,500 sqft</span></div>
+                    </div>
+                    <div class="villa-footer">
+                        <span class="villa-price">€18,900,000</span>
+                        <a href="#" class="villa-link">View</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Villa 4 - Medium -->
+            <article class="villa-card size-medium" data-category="urban">
+                <div class="villa-image">
+                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800)" alt="Manhattan Penthouse">
+                    <div class="villa-overlay"></div>
+                    <div class="villa-badge">New</div>
+                    <button class="villa-favorite" aria-label="Add to favorites">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="villa-content">
+                    <div class="villa-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>New York, USA</span>
+                    </div>
+                    <h3 class="villa-title">Manhattan Penthouse</h3>
+                    <div class="villa-specs">
+                        <div class="spec"><span>4 Beds</span></div>
+                        <div class="spec"><span>6 Baths</span></div>
+                        <div class="spec"><span>6,200 sqft</span></div>
+                    </div>
+                    <div class="villa-footer">
+                        <span class="villa-price">$45,000,000</span>
+                        <a href="#" class="villa-link">View</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Villa 5 - Small -->
+            <article class="villa-card size-small" data-category="island">
+                <div class="villa-image">
+                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=600)" alt="Mykonos Sanctuary">
+                    <div class="villa-overlay"></div>
+                    <button class="villa-favorite" aria-label="Add to favorites">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="villa-content">
+                    <div class="villa-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>Mykonos, Greece</span>
+                    </div>
+                    <h3 class="villa-title">Mykonos Sanctuary</h3>
+                    <div class="villa-specs">
+                        <div class="spec"><span>6 Beds</span></div>
+                        <div class="spec"><span>7,800 sqft</span></div>
+                    </div>
+                    <div class="villa-footer">
+                        <span class="villa-price">€12,500,000</span>
+                        <a href="#" class="villa-link">View</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Villa 6 - Large -->
+            <article class="villa-card size-large" data-category="coastal">
+                <div class="villa-image">
+                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200)" alt="Malibu Oceanfront">
+                    <div class="villa-overlay"></div>
+                    <button class="villa-favorite" aria-label="Add to favorites">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="villa-content">
+                    <div class="villa-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>Malibu, California</span>
+                    </div>
+                    <h3 class="villa-title">Malibu Oceanfront Estate</h3>
+                    <p class="villa-description">
+                        Contemporary architectural marvel perched on Carbon Beach with 
+                        100 feet of private beachfront and infinity pool.
+                    </p>
+                    <div class="villa-specs">
+                        <div class="spec">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                            </svg>
+                            <span>7 Beds</span>
+                        </div>
+                        <div class="spec">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 22V4c0-.5.2-1 .6-1.4C5 2.2 5.5 2 6 2h12c.5 0 1 .2 1.4.6.4.4.6.9.6 1.4v18l-4-2-4 2-4-2-4 2z"/>
+                            </svg>
+                            <span>9 Baths</span>
+                        </div>
+                        <div class="spec">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M3 9h18"/>
+                            </svg>
+                            <span>14,200 sqft</span>
+                        </div>
+                    </div>
+                    <div class="villa-footer">
+                        <span class="villa-price">$68,000,000</span>
+                        <a href="#" class="villa-link">
+                            <span>View Details</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Villa 7 - Small -->
+            <article class="villa-card size-small" data-category="island">
+                <div class="villa-image">
+                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600)" alt="Bali Paradise">
+                    <div class="villa-overlay"></div>
+                    <button class="villa-favorite" aria-label="Add to favorites">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="villa-content">
+                    <div class="villa-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>Ubud, Bali</span>
+                    </div>
+                    <h3 class="villa-title">Bali Paradise Estate</h3>
+                    <div class="villa-specs">
+                        <div class="spec"><span>8 Beds</span></div>
+                        <div class="spec"><span>11,000 sqft</span></div>
+                    </div>
+                    <div class="villa-footer">
+                        <span class="villa-price">$8,500,000</span>
+                        <a href="#" class="villa-link">View</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Villa 8 - Medium -->
+            <article class="villa-card size-medium" data-category="mountain">
+                <div class="villa-image">
+                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800)" alt="Aspen Chalet">
+                    <div class="villa-overlay"></div>
+                    <button class="villa-favorite" aria-label="Add to favorites">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="villa-content">
+                    <div class="villa-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>Aspen, Colorado</span>
+                    </div>
+                    <h3 class="villa-title">Aspen Mountain Chalet</h3>
+                    <div class="villa-specs">
+                        <div class="spec"><span>6 Beds</span></div>
+                        <div class="spec"><span>8 Baths</span></div>
+                        <div class="spec"><span>9,800 sqft</span></div>
+                    </div>
+                    <div class="villa-footer">
+                        <span class="villa-price">$32,000,000</span>
+                        <a href="#" class="villa-link">View</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Load More -->
+        <div class="load-more-container">
+            <button class="btn btn-outline load-more">
+                <span>Load More Properties</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                </svg>
+            </button>
+            <p class="results-count">Showing 8 of 48 properties</p>
+        </div>
+    </section>
+
+<!-- ==========================================
+     EXPLORE BY DESTINATION
+========================================== -->
+
+<section class="destination-section section">
+
+    <div class="section-header">
+        <span class="section-subtitle">Global Collection</span>
+
+        <h2 class="section-title">
+            Explore By <span>Destination</span>
+        </h2>
+
+        <p class="section-description">
+            Discover exceptional luxury villas in the world's most
+            prestigious destinations.
+        </p>
+    </div>
+
+    <div class="destination-grid">
+
+        <div class="destination-card">
+            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=800" alt="Italy">
+
+            <div class="destination-overlay">
+                <h3>Italy</h3>
+
+                <p>18 Luxury Villas</p>
+
+                <span>From €8.5M</span>
+            </div>
+        </div>
+
+        <div class="destination-card">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800" alt="France">
+
+            <div class="destination-overlay">
+                <h3>France</h3>
+
+                <p>25 Luxury Villas</p>
+
+                <span>From €12M</span>
+            </div>
+        </div>
+
+        <div class="destination-card">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800" alt="Dubai">
+
+            <div class="destination-overlay">
+                <h3>Dubai</h3>
+
+                <p>31 Luxury Villas</p>
+
+                <span>From $15M</span>
+            </div>
+        </div>
+
+        <div class="destination-card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" alt="Maldives">
+
+            <div class="destination-overlay">
+                <h3>Maldives</h3>
+
+                <p>14 Luxury Villas</p>
+
+                <span>From $20M</span>
+            </div>
+        </div>
+
+        <div class="destination-card">
+            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=800" alt="Greece">
+
+            <div class="destination-overlay">
+                <h3>Greece</h3>
+
+                <p>20 Luxury Villas</p>
+
+                <span>From €9M</span>
+            </div>
+        </div>
+
+        <div class="destination-card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" alt="Switzerland">
+
+            <div class="destination-overlay">
+                <h3>Switzerland</h3>
+
+                <p>11 Luxury Villas</p>
+
+                <span>From CHF 18M</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!--====================================
+      VILLA COMPARISON
+=====================================-->
+
+<section class="comparison-section section">
+
+    <div class="section-header">
+
+        <span class="section-subtitle">
+            Luxury Comparison
+        </span>
+
+        <h2 class="section-title">
+            Compare <span>Signature Villas</span>
+        </h2>
+
+        <p class="section-description">
+            Explore two extraordinary estates side by side and discover
+            which masterpiece perfectly matches your lifestyle.
+        </p>
+
+    </div>
+
+    <div class="comparison-wrapper">
+
+        <!-- Left Villa -->
+
+        <div class="compare-card">
+
+            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900" alt="Villa Imperium">
+
+            <div class="compare-content">
+
+                <h3>Villa Imperium</h3>
+
+                <p class="location">
+                    Amalfi Coast, Italy
+                </p>
+
+                <ul>
+
+                    <li>✔ €72,500,000</li>
+
+                    <li>✔ 12 Bedrooms</li>
+
+                    <li>✔ 16 Bathrooms</li>
+
+                    <li>✔ 24,800 sqft</li>
+
+                    <li>✔ Infinity Pool</li>
+
+                    <li>✔ Private Beach</li>
+
+                    <li>✔ Helipad</li>
+
+                    <li>✔ Wine Cellar</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- VS -->
+
+        <div class="compare-vs">
+
+            <span>VS</span>
+
+        </div>
+
+        <!-- Right Villa -->
+
+        <div class="compare-card">
+
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900" alt="Ocean Estate">
+
+            <div class="compare-content">
+
+                <h3>Ocean Majesty</h3>
+
+                <p class="location">
+                    Malibu, California
+                </p>
+
+                <ul>
+
+                    <li>✔ $68,000,000</li>
+
+                    <li>✔ 10 Bedrooms</li>
+
+                    <li>✔ 14 Bathrooms</li>
+
+                    <li>✔ 22,500 sqft</li>
+
+                    <li>✔ Infinity Pool</li>
+
+                    <li>✔ Private Marina</li>
+
+                    <li>✔ Cinema Room</li>
+
+                    <li>✔ Smart Home</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <svg class="footer-logo-emblem" viewBox="0 0 50 50">
+                        <circle cx="25" cy="25" r="23" fill="none" stroke="#c9a962" stroke-width="1.5"/>
+                        <circle cx="25" cy="25" r="8" fill="#c9a962"/>
+                        <polygon points="25,5 45,25 25,45 5,25" fill="none" stroke="#c9a962" stroke-width="1"/>
+                    </svg>
+                    <span class="footer-logo-text">Stackly</span>
+                </div>
+                <p class="footer-description">
+                    Curating the world's most exceptional luxury villas and estates 
+                    for discerning individuals since 1987.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="villas.html">Properties</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Destinations</h4>
+                <ul class="footer-links">
+                    <li><a href="#">French Riviera</a></li>
+                    <li><a href="#">Italian Coast</a></li>
+                    <li><a href="#">Greek Islands</a></li>
+                    <li><a href="#">Caribbean</a></li>
+                    <li><a href="#">Dubai</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li>42 Avenue Montaigne</li>
+                    <li>75008 Paris, France</li>
+                    <li><a href="tel:+33142686868">+33 1 42 68 68 68</a></li>
+                    <li><a href="mailto:contact@elysee-villas.com">contact@elysee-villas.com</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2024 Stackly Villas. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/common.js"></script>
+    <script src="js/villas.js"></script>
+</body>
+</html>

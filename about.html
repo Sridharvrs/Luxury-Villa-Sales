@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Stackly Luxury Villas</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="auth/auth.css">
+    <script src="auth/auth.js" defer></script>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <svg class="loader-logo" viewBox="0 0 50 50">
+                <circle class="emblem-outer" cx="25" cy="25" r="23"/>
+                <circle class="emblem-inner" cx="25" cy="25" r="8"/>
+                <polygon class="emblem-diamond" points="25,5 45,25 25,45 5,25"/>
+            </svg>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <div class="logo-emblem">
+                    <svg viewBox="0 0 50 50">
+                        <circle class="emblem-outer" cx="25" cy="25" r="23"/>
+                        <circle class="emblem-inner" cx="25" cy="25" r="8"/>
+                        <polygon class="emblem-diamond" points="25,5 45,25 25,45 5,25"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="brand">Stackly</span>
+                    <span class="tagline">Luxury Villas</span>
+                </div>
+            </a>
+
+            <div class="nav-orbital">
+                <ul class="nav-links">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="villas.html" class="nav-link">Villas</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <a onclick="openAuth()" class="nav-cta">
+                    <span>Book Viewing</span>
+                    <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Split Section -->
+    <section class="about-hero">
+        <div class="hero-split left">
+            <div class="split-content">
+                <span class="hero-label">Our Story</span>
+                <h1 class="hero-title">
+                    Defining <br><span>Luxury</span> <br>Since 1987
+                </h1>
+                <div class="hero-decorative">
+                    <span class="deco-line"></span>
+                    <span class="deco-diamond"></span>
+                    <span class="deco-line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-split right">
+            <div class="hero-image-container">
+                <img src="[images.unsplash.com](https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200)" alt="Luxury Villa" class="hero-image">
+                <div class="image-frame"></div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <span>Discover Our Legacy</span>
+            <div class="scroll-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section section">
+        <div class="story-grid">
+            <div class="story-visual reveal-left">
+                <div class="visual-stack">
+                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800)" alt="Interior" class="stack-image main">
+                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600)" alt="Detail" class="stack-image secondary">
+                    <div class="stack-stat">
+                        <span class="stat-value">37</span>
+                        <span class="stat-text">Years of<br>Excellence</span>
+                    </div>
+                </div>
+            </div>
+            <div class="story-content reveal-right">
+                <span class="section-subtitle">Who We Are</span>
+                <h2 class="section-title">A Legacy of <span>Excellence</span></h2>
+                <p class="story-text">
+                    Founded in Paris in 1987 by Jean-Pierre Stackly, our company began with a 
+                    singular vision: to redefine luxury real estate by connecting discerning 
+                    individuals with extraordinary properties that transcend mere accommodation.
+                </p>
+                <p class="story-text">
+                    What started as a boutique agency specializing in French Riviera estates 
+                    has evolved into a global network spanning 28 countries, yet we've never 
+                    lost our founding commitment to personalized service and uncompromising quality.
+                </p>
+                <p class="story-text">
+                    Today, Stackly represents the pinnacle of luxury real estate, with a curated 
+                    portfolio of over 350 exceptional properties, each hand-selected for its 
+                    architectural significance, prime location, and investment potential.
+                </p>
+                <div class="story-signature">
+                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100)" alt="Jean-Pierre Stackly" class="signature-image">
+                    <div class="signature-info">
+                        <span class="signature-name">Jean-Pierre Stackly</span>
+                        <span class="signature-title">Founder & Chairman</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section section">
+        <div class="section-header reveal">
+            <span class="section-subtitle">Our Journey</span>
+            <h2 class="section-title">Milestones of <span>Excellence</span></h2>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-line"></div>
+            
+            <div class="timeline-item" data-year="1987">
+                <div class="timeline-marker">
+                    <span class="marker-dot"></span>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-year">1987</span>
+                    <h3 class="timeline-title">The Beginning</h3>
+                    <p class="timeline-text">
+                        Stackly is founded in Paris with a focus on exceptional French Riviera properties. 
+                        Our first sale: a historic villa in Cap-Ferrat.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-year="1995">
+                <div class="timeline-marker">
+                    <span class="marker-dot"></span>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-year">1995</span>
+                    <h3 class="timeline-title">European Expansion</h3>
+                    <p class="timeline-text">
+                        Opening offices in London, Monaco, and Geneva, establishing Stackly 
+                        as Europe's premier luxury property specialist.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-year="2005">
+                <div class="timeline-marker">
+                    <span class="marker-dot"></span>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-year">2005</span>
+                    <h3 class="timeline-title">Going Global</h3>
+                    <p class="timeline-text">
+                        Expansion into North America, Middle East, and Asia Pacific. 
+                        Portfolio grows to include iconic properties in Dubai, New York, and Hong Kong.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-year="2015">
+                <div class="timeline-marker">
+                    <span class="marker-dot"></span>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-year">2015</span>
+                    <h3 class="timeline-title">Digital Innovation</h3>
+                    <p class="timeline-text">
+                        Launch of immersive virtual property tours and blockchain-secured 
+                        transactions, pioneering digital innovation in luxury real estate.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-year="2024">
+                <div class="timeline-marker">
+                    <span class="marker-dot"></span>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-year">2024</span>
+                    <h3 class="timeline-title">New Horizons</h3>
+                    <p class="timeline-text">
+                        Celebrating 37 years of excellence with presence in 28 countries, 
+                        350+ luxury properties, and a team of 200+ dedicated specialists.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="values-background">
+            <img src="[images.unsplash.com](https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=1600)" alt="Luxury Interior">
+            <div class="values-overlay"></div>
+        </div>
+        <div class="values-content">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Our Philosophy</span>
+                <h2 class="section-title">Values That <span>Guide</span> Us</h2>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card reveal">
+                    <div class="value-number">01</div>
+                    <h3 class="value-title">Excellence</h3>
+                    <p class="value-text">
+                        We accept nothing less than extraordinary. Every property in our 
+                        portfolio meets the highest standards of quality and distinction.
+                    </p>
+                </div>
+
+                <div class="value-card reveal">
+                    <div class="value-number">02</div>
+                    <h3 class="value-title">Discretion</h3>
+                    <p class="value-text">
+                        Privacy is paramount. We conduct every transaction with the 
+                        utmost confidentiality and professionalism.
+                    </p>
+                </div>
+
+                <div class="value-card reveal">
+                    <div class="value-number">03</div>
+                    <h3 class="value-title">Integrity</h3>
+                    <p class="value-text">
+                        Transparency and honesty form the foundation of every 
+                        relationship we build with our clients and partners.
+                    </p>
+                </div>
+
+                <div class="value-card reveal">
+                    <div class="value-number">04</div>
+                    <h3 class="value-title">Innovation</h3>
+                    <p class="value-text">
+                        We embrace technology and new approaches while honoring 
+                        the timeless principles of exceptional service.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Exclusive Property Showcase -->
+<section class="property-showcase section">
+    <div class="section-header reveal">
+        <span class="section-subtitle">Handpicked Selection</span>
+        <h2 class="section-title">Exclusive <span>Property Showcase</span></h2>
+    </div>
+
+    <div class="property-grid">
+
+        <!-- Property 1 -->
+        <div class="property-card reveal">
+            <div class="property-image">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800" alt="Villa Aurora">
+                <div class="property-badge">Featured</div>
+                <div class="property-overlay">
+                    <button class="view-btn">View Details</button>
+                </div>
+            </div>
+            <div class="property-info">
+                <h3>Villa Aurora</h3>
+                <p>French Riviera, France</p>
+                <div class="property-meta">
+                    <span>5 Beds</span>
+                    <span>6 Baths</span>
+                    <span>Ocean View</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Property 2 -->
+        <div class="property-card reveal">
+            <div class="property-image">
+                <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800" alt="Skyline Mansion">
+                <div class="property-badge">New</div>
+                <div class="property-overlay">
+                    <button class="view-btn">View Details</button>
+                </div>
+            </div>
+            <div class="property-info">
+                <h3>Skyline Mansion</h3>
+                <p>Dubai, UAE</p>
+                <div class="property-meta">
+                    <span>6 Beds</span>
+                    <span>8 Baths</span>
+                    <span>City View</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Property 3 -->
+        <div class="property-card reveal">
+            <div class="property-image">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800" alt="Ocean Pearl Villa">
+                <div class="property-badge">Luxury</div>
+                <div class="property-overlay">
+                    <button class="view-btn">View Details</button>
+                </div>
+            </div>
+            <div class="property-info">
+                <h3>Ocean Pearl Villa</h3>
+                <p>Maldives</p>
+                <div class="property-meta">
+                    <span>4 Beds</span>
+                    <span>5 Baths</span>
+                    <span>Beachfront</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- How We Work Section -->
+<section class="how-we-work section">
+    <div class="section-header reveal">
+        <span class="section-subtitle">Our Process</span>
+        <h2 class="section-title">How We <span>Work</span></h2>
+    </div>
+
+    <div class="process-container">
+        
+        <!-- Step 1 -->
+        <div class="process-card reveal">
+            <div class="process-number">01</div>
+            <div class="process-icon">🔍</div>
+            <h3 class="process-title">Discovery & Consultation</h3>
+            <p class="process-text">
+                We begin by understanding your lifestyle, preferences, and investment goals 
+                through a private one-on-one consultation.
+            </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-card reveal">
+            <div class="process-number">02</div>
+            <div class="process-icon">🏡</div>
+            <h3 class="process-title">Curated Property Selection</h3>
+            <p class="process-text">
+                Our experts handpick exclusive villas and estates tailored specifically 
+                to your vision and requirements.
+            </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-card reveal">
+            <div class="process-number">03</div>
+            <div class="process-icon">🗝️</div>
+            <h3 class="process-title">Private Viewing Experience</h3>
+            <p class="process-text">
+                Experience properties through private tours, virtual walkthroughs, 
+                or exclusive on-site visits arranged by our team.
+            </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-card reveal">
+            <div class="process-number">04</div>
+            <div class="process-icon">📄</div>
+            <h3 class="process-title">Legal & Investment Support</h3>
+            <p class="process-text">
+                We handle all documentation, legal checks, and investment advisory 
+                with complete transparency and security.
+            </p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="process-card reveal">
+            <div class="process-number">05</div>
+            <div class="process-icon">✨</div>
+            <h3 class="process-title">Seamless Ownership</h3>
+            <p class="process-text">
+                From negotiation to final handover, we ensure a smooth, discreet, 
+                and luxurious ownership experience.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Team Section -->
+    <section class="team-section section">
+        <div class="section-header reveal">
+            <span class="section-subtitle">Leadership</span>
+            <h2 class="section-title">Meet Our <span>Team</span></h2>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card reveal">
+                <div class="team-image">
+                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500)" alt="Jean-Pierre Stackly">
+                    <div class="team-overlay">
+                        <div class="team-social">
+                            <a href="#" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                    <rect x="2" y="9" width="4" height="12"/>
+                                    <circle cx="4" cy="4" r="2"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Email">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3 class="team-name">Jean-Pierre Stackly</h3>
+                    <span class="team-role">Founder & Chairman</span>
+                </div>
+            </div>
+
+            <div class="team-card reveal">
+                <div class="team-image">
+                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500)" alt="Sophie Laurent">
+                    <div class="team-overlay">
+                        <div class="team-social">
+                            <a href="#" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                    <rect x="2" y="9" width="4" height="12"/>
+                                    <circle cx="4" cy="4" r="2"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Email">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3 class="team-name">Sophie Laurent</h3>
+                    <span class="team-role">Chief Executive Officer</span>
+                </div>
+            </div>
+
+            <div class="team-card reveal">
+                <div class="team-image">
+                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500)" alt="Marcus Chen">
+                    <div class="team-overlay">
+                        <div class="team-social">
+                            <a href="#" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                    <rect x="2" y="9" width="4" height="12"/>
+                                    <circle cx="4" cy="4" r="2"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Email">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3 class="team-name">Marcus Chen</h3>
+                    <span class="team-role">Director, Asia Pacific</span>
+                </div>
+            </div>
+
+            <div class="team-card reveal">
+                <div class="team-image">
+                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500)" alt="Elena Petrov">
+                    <div class="team-overlay">
+                        <div class="team-social">
+                            <a href="#" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                    <rect x="2" y="9" width="4" height="12"/>
+                                    <circle cx="4" cy="4" r="2"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Email">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3 class="team-name">Elena Petrov</h3>
+                    <span class="team-role">Head of Client Relations</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Client Experience / Testimonials -->
+<section class="testimonials-section section">
+    
+    <div class="section-header reveal">
+        <span class="section-subtitle">Client Experiences</span>
+        <h2 class="section-title">What Our <span>Clients Say</span></h2>
+    </div>
+
+    <div class="testimonials-container">
+
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card reveal">
+            <div class="quote-icon">“</div>
+            <p class="testimonial-text">
+                Stackly didn’t just find us a villa — they understood our lifestyle.
+                The entire process felt private, seamless, and truly world-class.
+            </p>
+
+            <div class="testimonial-footer">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200" alt="Client" class="client-img">
+                <div>
+                    <h4 class="client-name">Jonathan Mercer</h4>
+                    <span class="client-role">Private Investor, UK</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card reveal">
+            <div class="quote-icon">“</div>
+            <p class="testimonial-text">
+                The level of discretion and detail was unmatched. Every property
+                shown to us felt handpicked as if it was built for our family alone.
+            </p>
+
+            <div class="testimonial-footer">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200" alt="Client" class="client-img">
+                <div>
+                    <h4 class="client-name">Sofia Laurent</h4>
+                    <span class="client-role">Entrepreneur, Monaco</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card reveal">
+            <div class="quote-icon">“</div>
+            <p class="testimonial-text">
+                From consultation to final handover, everything was handled with precision.
+                Stackly sets a new benchmark for luxury real estate service.
+            </p>
+
+            <div class="testimonial-footer">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200" alt="Client" class="client-img">
+                <div>
+                    <h4 class="client-name">Daniel Kim</h4>
+                    <span class="client-role">Tech Founder, Singapore</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-block reveal">
+                <span class="stat-number" data-count="350">0</span>
+                <span class="stat-plus">+</span>
+                <span class="stat-label">Luxury Properties</span>
+            </div>
+            <div class="stat-block reveal">
+                <span class="stat-number" data-count="28">0</span>
+                <span class="stat-label">Countries</span>
+            </div>
+            <div class="stat-block reveal">
+                <span class="stat-number" data-count="12">0</span>
+                <span class="stat-label">Billion in Sales</span>
+                <span class="stat-currency">€</span>
+            </div>
+            <div class="stat-block reveal">
+                <span class="stat-number" data-count="200">0</span>
+                <span class="stat-plus">+</span>
+                <span class="stat-label">Team Members</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <svg class="footer-logo-emblem" viewBox="0 0 50 50">
+                        <circle cx="25" cy="25" r="23" fill="none" stroke="#c9a962" stroke-width="1.5"/>
+                        <circle cx="25" cy="25" r="8" fill="#c9a962"/>
+                        <polygon points="25,5 45,25 25,45 5,25" fill="none" stroke="#c9a962" stroke-width="1"/>
+                    </svg>
+                    <span class="footer-logo-text">Stackly</span>
+                </div>
+                <p class="footer-description">
+                    Curating the world's most exceptional luxury villas and estates 
+                    for discerning individuals since 1987.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="villas.html">Properties</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Destinations</h4>
+                <ul class="footer-links">
+                    <li><a href="#">French Riviera</a></li>
+                    <li><a href="#">Italian Coast</a></li>
+                    <li><a href="#">Greek Islands</a></li>
+                    <li><a href="#">Caribbean</a></li>
+                    <li><a href="#">Dubai</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li>42 Avenue Montaigne</li>
+                    <li>75008 Paris, France</li>
+                    <li><a href="tel:+33142686868">+33 1 42 68 68 68</a></li>
+                    <li><a href="mailto:contact@elysee-villas.com">contact@elysee-villas.com</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2024 Stackly Villas. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/common.js"></script>
+    <script src="js/about.js"></script>
+</body>
+</html>

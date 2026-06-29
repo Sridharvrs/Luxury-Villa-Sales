@@ -1,0 +1,119 @@
+.auth-modal{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.auth-modal.hidden{
+  display: none;
+}
+
+.auth-box{
+  width: 420px;
+  background: #111;
+  color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  position: relative;
+  border: 1px solid rgba(201,169,98,0.3);
+}
+
+.auth-close{
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #c9a962;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Tabs */
+.auth-tabs{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tab{
+  flex: 1;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.tab.active{
+  color: #c9a962;
+  border-bottom: 2px solid #c9a962;
+}
+
+/* Forms */
+.auth-form{ display: none; }
+.auth-form.active{ display: block; }
+
+.auth-form input,
+.auth-form select{
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background: #000;
+  border: 1px solid #333;
+  color: white;
+}
+
+/* Password */
+.password-field{
+  position: relative;
+}
+
+.eye{
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  cursor: pointer;
+}
+
+/* Buttons */
+.btn-auth{
+  width: 100%;
+  padding: 12px;
+  background: #c9a962;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.google-btn{
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #fff;
+  border: none;
+}
+
+/* Hint */
+.password-hint{
+  font-size: 12px;
+  color: #ff4d4d;
+  min-height: 18px;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.divider{
+  text-align: center;
+  margin: 10px 0;
+  color: #777;
+}
