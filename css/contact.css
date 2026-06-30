@@ -10,6 +10,36 @@
     --gray: rgba(255,255,255,0.6);
 }
 
+.logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img{
+    height: 80px;      /* Desktop */
+    width: auto;
+    display: block;
+    object-fit: contain;
+    transition: transform .3s ease;
+}
+
+.logo-img:hover{
+    transform: scale(1.05);
+}
+
+@media (max-width:768px){
+    .logo-img{
+        height: 48px;
+    }
+}
+
+@media (max-width:480px){
+    .logo-img{
+        height: 42px;
+    }
+}
+
 /* ================= HERO ================= */
 
 .contact-hero {

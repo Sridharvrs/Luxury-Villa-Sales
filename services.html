@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Stackly Luxury Villas</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="auth/auth.css">
+    <script src="auth/auth.js" defer></script>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <svg class="loader-logo" viewBox="0 0 50 50">
+                <circle class="emblem-outer" cx="25" cy="25" r="23"/>
+                <circle class="emblem-inner" cx="25" cy="25" r="8"/>
+                <polygon class="emblem-diamond" points="25,5 45,25 25,45 5,25"/>
+            </svg>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <img src="images/stackly_logo.webp" alt="Stackly Luxury Villas" class="logo-img">
+            </a>
+
+            <div class="nav-orbital">
+                <ul class="nav-links">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="villas.html" class="nav-link">Villas</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <a onclick="openAuth()" class="nav-cta">
+                    <span>Book Viewing</span>
+                    <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Services Hero -->
+    <section class="services-hero">
+        <div class="hero-bg-animation">
+            <div class="animated-circle circle-1"></div>
+            <div class="animated-circle circle-2"></div>
+            <div class="animated-circle circle-3"></div>
+        </div>
+        <div class="hero-content">
+            <span class="hero-label">What We Offer</span>
+            <h1 class="hero-title">Exceptional <span>Services</span></h1>
+            <p class="hero-description">
+                Beyond finding your dream property, we provide comprehensive 
+                services to ensure a seamless luxury real estate experience
+            </p>
+        </div>
+    </section>
+
+    <!-- --- Why Choose Us --- -->
+<section class="trust-section section">
+    <div class="section-header reveal">
+        <span class="section-subtitle">Trust & Authority</span>
+        <h2 class="section-title">Why Choose <span>Stackly</span></h2>
+    </div>
+
+    <div class="trust-grid">
+
+        <div class="trust-card reveal">
+            <div class="trust-icon">★</div>
+            <h3>20+ Years Experience</h3>
+            <p>Decades of expertise in global luxury real estate markets.</p>
+        </div>
+
+        <div class="trust-card reveal">
+            <div class="trust-icon">🌍</div>
+            <h3>Global Property Network</h3>
+            <p>Access to exclusive villas and estates across 30+ countries.</p>
+        </div>
+
+        <div class="trust-card reveal">
+            <div class="trust-icon">🔒</div>
+            <h3>Off-Market Listings</h3>
+            <p>Private luxury properties not available on public platforms.</p>
+        </div>
+
+        <div class="trust-card reveal">
+            <div class="trust-icon">👑</div>
+            <h3>Elite Client Base</h3>
+            <p>Trusted by high-net-worth individuals and global investors.</p>
+        </div>
+
+        <div class="trust-card reveal">
+            <div class="trust-icon">⚖</div>
+            <h3>Legal & Financial Security</h3>
+            <p>End-to-end verified transactions with complete transparency.</p>
+        </div>
+
+        <div class="trust-card reveal">
+            <div class="trust-icon">✨</div>
+            <h3>White-Glove Service</h3>
+            <p>Personalized concierge-level experience from start to finish.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- --- Exclusive Properties Showcase --- -->
+<section class="featured-properties section">
+    <div class="section-header reveal">
+        <span class="section-subtitle">Handpicked Collection</span>
+        <h2 class="section-title">Exclusive <span>Properties</span></h2>
+    </div>
+
+    <div class="property-grid">
+
+        <div class="property-card reveal">
+            <div class="property-image">
+                <img src="images/villa14.webp" alt="Villa">
+                <div class="property-tag">French Riviera</div>
+            </div>
+            <div class="property-content">
+                <h3>Villa Stackly Azure</h3>
+                <p>Private cliffside villa with infinity sea views and modern luxury interiors.</p>
+                <div class="property-meta">
+                    <span>6 Beds</span>
+                    <span>7 Baths</span>
+                    <span>Ocean View</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="property-card reveal">
+            <div class="property-image">
+                <img src="images/villa15.webp" alt="Villa">
+                <div class="property-tag">Dubai</div>
+            </div>
+            <div class="property-content">
+                <h3>Desert Crown Estate</h3>
+                <p>Ultra-modern mansion in the heart of Dubai with private pool and skyline view.</p>
+                <div class="property-meta">
+                    <span>8 Beds</span>
+                    <span>10 Baths</span>
+                    <span>Smart Home</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="property-card reveal">
+            <div class="property-image">
+                <img src="images/villa16.webp" alt="Villa">
+                <div class="property-tag">Italy</div>
+            </div>
+            <div class="property-content">
+                <h3>Villa Toscana Grande</h3>
+                <p>Classic Italian countryside estate surrounded by vineyards and nature.</p>
+                <div class="property-meta">
+                    <span>5 Beds</span>
+                    <span>Wine Cellar</span>
+                    <span>Garden Estate</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Main Services Accordion -->
+    <section class="services-accordion section">
+        <div class="accordion-container">
+            <!-- Service 1 -->
+            <div class="accordion-item" data-service="acquisition">
+                <div class="accordion-header">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 80 80" class="icon-animated">
+                            <circle class="icon-bg" cx="40" cy="40" r="38"/>
+                            <path class="icon-path" d="M25 45l8 8 22-22" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path class="icon-path delay-1" d="M20 30h10M20 35h15M20 40h8" fill="none" stroke-width="2" stroke-linecap="round"/>
+                            <rect class="icon-path delay-2" x="45" y="30" width="15" height="20" rx="2" fill="none" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="service-header-content">
+                        <span class="service-number">01</span>
+                        <h3 class="service-title">Property Acquisition</h3>
+                        <p class="service-brief">End-to-end support from search to closing</p>
+                    </div>
+                    <div class="accordion-toggle">
+                        <span class="toggle-line horizontal"></span>
+                        <span class="toggle-line vertical"></span>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <div class="content-grid">
+                        <div class="content-text">
+                            <p>
+                                Our property acquisition service provides comprehensive support throughout 
+                                your luxury real estate journey. From initial consultation to final closing, 
+                                our team of experts ensures every detail is handled with precision and care.
+                            </p>
+                            <ul class="service-features">
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Personalized property matching based on your criteria
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Access to exclusive off-market listings
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Due diligence and property inspection coordination
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Negotiation support and contract review
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Closing coordination and handover management
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content-image">
+                            <img src="images/villa1.webp" alt="Property Acquisition">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="accordion-item" data-service="sales">
+                <div class="accordion-header">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 80 80" class="icon-animated">
+                            <circle class="icon-bg" cx="40" cy="40" r="38"/>
+                            <path class="icon-path" d="M20 50V25l20-10 20 10v25" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path class="icon-path delay-1" d="M30 50V35h8v15M42 50V40h8v10" fill="none" stroke-width="2" stroke-linecap="round"/>
+                            <circle class="icon-path delay-2" cx="40" cy="28" r="4" fill="none" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="service-header-content">
+                        <span class="service-number">02</span>
+                        <h3 class="service-title">Property Sales</h3>
+                        <p class="service-brief">Strategic marketing for maximum value</p>
+                    </div>
+                    <div class="accordion-toggle">
+                        <span class="toggle-line horizontal"></span>
+                        <span class="toggle-line vertical"></span>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <div class="content-grid">
+                        <div class="content-text">
+                            <p>
+                                Selling a luxury property requires a unique approach. Our sales team 
+                                combines global reach with local expertise, utilizing sophisticated 
+                                marketing strategies to present your property to qualified buyers worldwide.
+                            </p>
+                            <ul class="service-features">
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Professional photography and videography
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Virtual 3D tours and drone footage
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Targeted marketing to qualified buyers
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Discreet off-market sales options
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    International buyer network access
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content-image">
+                            <img src="images/villa2.webp" alt="Property Sales">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="accordion-item" data-service="management">
+                <div class="accordion-header">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 80 80" class="icon-animated">
+                            <circle class="icon-bg" cx="40" cy="40" r="38"/>
+                            <rect class="icon-path" x="22" y="25" width="36" height="30" rx="3" fill="none" stroke-width="2.5"/>
+                            <path class="icon-path delay-1" d="M22 35h36M30 25v-5M50 25v-5" fill="none" stroke-width="2" stroke-linecap="round"/>
+                            <circle class="icon-path delay-2" cx="32" cy="42" r="3" fill="none" stroke-width="2"/>
+                            <circle class="icon-path delay-2" cx="40" cy="42" r="3" fill="none" stroke-width="2"/>
+                            <circle class="icon-path delay-2" cx="48" cy="42" r="3" fill="none" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="service-header-content">
+                        <span class="service-number">03</span>
+                        <h3 class="service-title">Property Management</h3>
+                        <p class="service-brief">Comprehensive care for your investment</p>
+                    </div>
+                    <div class="accordion-toggle">
+                        <span class="toggle-line horizontal"></span>
+                        <span class="toggle-line vertical"></span>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <div class="content-grid">
+                        <div class="content-text">
+                            <p>
+                                Our property management services ensure your investment remains in pristine 
+                                condition while maximizing its potential. We handle every aspect of property 
+                                care with the attention it deserves.
+                            </p>
+                            <ul class="service-features">
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    24/7 property monitoring and security
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Regular maintenance and inspections
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Staff management and coordination
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Rental management for income properties
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Emergency response services
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content-image">
+                            <img src="images/villa3.webp" alt="Property Management">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="accordion-item" data-service="investment">
+                <div class="accordion-header">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 80 80" class="icon-animated">
+                            <circle class="icon-bg" cx="40" cy="40" r="38"/>
+                            <path class="icon-path" d="M20 55l12-15 10 8 18-23" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle class="icon-path delay-1" cx="60" cy="25" r="5" fill="none" stroke-width="2"/>
+                            <path class="icon-path delay-2" d="M57 25h6M60 22v6" fill="none" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="service-header-content">
+                        <span class="service-number">04</span>
+                        <h3 class="service-title">Investment Advisory</h3>
+                        <p class="service-brief">Strategic guidance for portfolio growth</p>
+                    </div>
+                    <div class="accordion-toggle">
+                        <span class="toggle-line horizontal"></span>
+                        <span class="toggle-line vertical"></span>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <div class="content-grid">
+                        <div class="content-text">
+                            <p>
+                                Our investment advisory team provides expert guidance on building and 
+                                optimizing your luxury real estate portfolio. We identify opportunities 
+                                that align with your financial goals and risk tolerance.
+                            </p>
+                            <ul class="service-features">
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Market analysis and trend forecasting
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Portfolio diversification strategies
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    ROI projections and financial modeling
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Tax optimization consultation
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Exit strategy planning
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content-image">
+                            <img src="images/villa5.webp" alt="Investment Advisory">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="accordion-item" data-service="concierge">
+                <div class="accordion-header">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 80 80" class="icon-animated">
+                            <circle class="icon-bg" cx="40" cy="40" r="38"/>
+                            <path class="icon-path" d="M40 20c-11 0-20 9-20 20s9 20 20 20 20-9 20-20-9-20-20-20z" fill="none" stroke-width="2"/>
+                            <path class="icon-path delay-1" d="M40 28v12l8 8" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle class="icon-path delay-2" cx="40" cy="40" r="3" fill="none" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="service-header-content">
+                        <span class="service-number">05</span>
+                        <h3 class="service-title">Concierge Services</h3>
+                        <p class="service-brief">24/7 lifestyle support and assistance</p>
+                    </div>
+                    <div class="accordion-toggle">
+                        <span class="toggle-line horizontal"></span>
+                        <span class="toggle-line vertical"></span>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <div class="content-grid">
+                        <div class="content-text">
+                            <p>
+                                Our concierge services extend beyond real estate to enhance every 
+                                aspect of your luxury lifestyle. Available 24/7, our team handles 
+                                everything from travel arrangements to exclusive event access.
+                            </p>
+                            <ul class="service-features">
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Private jet and yacht charter arrangements
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Exclusive event and restaurant reservations
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Personal shopping and styling services
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Art and collectibles acquisition
+                                </li>
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    Relocation and settling-in assistance
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content-image">
+                            <img src="images/villa6.webp" alt="Concierge Services">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section section">
+        <div class="section-header reveal">
+            <span class="section-subtitle">How It Works</span>
+            <h2 class="section-title">Our <span>Process</span></h2>
+        </div>
+
+        <div class="process-timeline">
+            <div class="process-step reveal">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <h3>Initial Consultation</h3>
+                    <p>We begin with an in-depth discussion of your requirements, preferences, and vision.</p>
+                </div>
+                <div class="step-connector"></div>
+            </div>
+
+            <div class="process-step reveal">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <h3>Property Curation</h3>
+                    <p>Our team curates a selection of properties tailored specifically to your criteria.</p>
+                </div>
+                <div class="step-connector"></div>
+            </div>
+
+            <div class="process-step reveal">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <h3>Private Viewings</h3>
+                    <p>Experience exclusive viewings with detailed insights from our property specialists.</p>
+                </div>
+                <div class="step-connector"></div>
+            </div>
+
+            <div class="process-step reveal">
+                <div class="step-number">04</div>
+                <div class="step-content">
+                    <h3>Seamless Closing</h3>
+                    <p>We handle all aspects of the transaction, ensuring a smooth and secure process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="concierge-section section">
+    <div class="section-header reveal">
+        <span class="section-subtitle">Beyond Real Estate</span>
+        <h2 class="section-title">Concierge <span>Lifestyle</span></h2>
+    </div>
+
+    <div class="concierge-wrapper">
+
+        <div class="concierge-intro reveal">
+            <p>
+                At Stackly, we don’t stop at property acquisition. We curate a complete luxury lifestyle 
+                experience — from private aviation to global relocation support.
+            </p>
+        </div>
+
+        <div class="concierge-grid">
+
+            <div class="concierge-card reveal">
+                <div class="concierge-icon">✈</div>
+                <h3>Private Aviation</h3>
+                <p>Seamless private jet bookings for global travel in ultimate comfort.</p>
+            </div>
+
+            <div class="concierge-card reveal">
+                <div class="concierge-icon">🛥</div>
+                <h3>Yacht Charter</h3>
+                <p>Luxury yacht rentals across the Mediterranean, Dubai, and Caribbean.</p>
+            </div>
+
+            <div class="concierge-card reveal">
+                <div class="concierge-icon">🏨</div>
+                <h3>Luxury Stays</h3>
+                <p>5-star hotel bookings and ultra-exclusive private resorts worldwide.</p>
+            </div>
+
+            <div class="concierge-card reveal">
+                <div class="concierge-icon">🎭</div>
+                <h3>Event Access</h3>
+                <p>VIP access to global fashion shows, art fairs, and private events.</p>
+            </div>
+
+            <div class="concierge-card reveal">
+                <div class="concierge-icon">🛋</div>
+                <h3>Interior Styling</h3>
+                <p>Luxury interior design and furnishing for your new property.</p>
+            </div>
+
+            <div class="concierge-card reveal">
+                <div class="concierge-icon">🌍</div>
+                <h3>Global Relocation</h3>
+                <p>Full relocation assistance including visas, logistics, and settling-in support.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- CTA Section -->
+    <section class="services-cta">
+        <div class="cta-pattern">
+            <div class="pattern-grid">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="cta-content reveal">
+            <h2 class="cta-title">Ready to Begin?</h2>
+            <p class="cta-text">
+                Schedule a consultation with our team to discuss how we can assist 
+                you in finding or selling your exceptional property.
+            </p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary">
+                    <span>Schedule Consultation</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="tel:+33142686868" class="btn btn-outline">
+                    <span>Call Us Now</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <svg class="footer-logo-emblem" viewBox="0 0 50 50">
+                        <circle cx="25" cy="25" r="23" fill="none" stroke="#c9a962" stroke-width="1.5"/>
+                        <circle cx="25" cy="25" r="8" fill="#c9a962"/>
+                        <polygon points="25,5 45,25 25,45 5,25" fill="none" stroke="#c9a962" stroke-width="1"/>
+                    </svg>
+                    <span class="footer-logo-text">Stackly</span>
+                </div>
+                <p class="footer-description">
+                    Curating the world's most exceptional luxury villas and estates 
+                    for discerning individuals since 1987.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="villas.html">Properties</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Destinations</h4>
+                <ul class="footer-links">
+                    <li><a href="#">French Riviera</a></li>
+                    <li><a href="#">Italian Coast</a></li>
+                    <li><a href="#">Greek Islands</a></li>
+                    <li><a href="#">Caribbean</a></li>
+                    <li><a href="#">Dubai</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li>42 Avenue Montaigne</li>
+                    <li>75008 Paris, France</li>
+                    <li><a href="tel:+33142686868">+33 1 42 68 68 68</a></li>
+                    <li><a href="mailto:contact@elysee-villas.com">contact@elysee-villas.com</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2024 Stackly Villas. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/common.js"></script>
+    <script src="js/services.js"></script>
+</body>
+</html>

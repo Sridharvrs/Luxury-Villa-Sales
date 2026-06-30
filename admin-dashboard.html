@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Stackly Villas</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/admindashboard.css">
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+<aside class="sidebar">
+    <div class="logo">
+        <h2>Stackly</h2>
+        <span>Luxury Dashboard</span>
+    </div>
+
+    <ul class="menu">
+
+      <li class="active" data-target="overview">🏠 Overview</li>
+
+      <li data-target="users">👥 User Management</li>
+
+      <li data-target="properties">🏡 Property Management</li>
+
+      <li data-target="transactions">💰 Transactions</li>
+
+      <li data-target="marketing">📢 Marketing & Promotion</li>
+
+      <li data-target="settings">⚙ Settings</li>
+
+      <li class="logout">🚪 Logout</li>
+
+    </ul>
+</aside>
+
+<!-- ================= MAIN AREA ================= -->
+
+<main class="main">
+
+  <!-- TOP NAVBAR -->
+    <header class="topbar">
+        <div class="search">
+            <input type="text" placeholder="Search luxury villas...">
+        </div>
+
+        <div class="user-box">
+            <span class="notif">🔔</span>
+            <div class="user">
+                <img src="images/team2.webp" alt="user">
+                <div>
+                    <h4>John Smith</h4>
+                    <small>Admin</small>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  <!-- ALL SECTIONS (INSIDE SAME PAGE) -->
+<section id="overview" class="page active">
+
+  <!-- HEADER -->
+  <div class="page-header">
+    <h1>🏠 Admin Overview</h1>
+    <p>Welcome back Admin, here’s a real-time system summary of your platform.</p>
+  </div>
+
+  <!-- KEY METRICS -->
+  <div class="stats-grid">
+
+    <div class="card">
+      <h3>1,248</h3>
+      <p>Total Users</p>
+      <small>+12% this month</small>
+    </div>
+
+    <div class="card">
+      <h3>356</h3>
+      <p>Total Properties</p>
+      <small>+8 new today</small>
+    </div>
+
+    <div class="card">
+      <h3>89</h3>
+      <p>Active Viewings</p>
+      <small>Live bookings</small>
+    </div>
+
+    <div class="card">
+      <h3>$4.2M</h3>
+      <p>Total Revenue</p>
+      <small>Commission earnings</small>
+    </div>
+
+  </div>
+
+  <!-- QUICK ACTIONS -->
+  <div class="quick-actions">
+
+    <h2>⚡ Quick Actions</h2>
+
+    <div class="action-grid">
+
+      <div class="action-card">
+        <h3>➕ Add Property</h3>
+        <p>Create new luxury listing</p>
+      </div>
+
+      <div class="action-card">
+        <h3>👥 Manage Users</h3>
+        <p>View and control user accounts</p>
+      </div>
+
+      <div class="action-card">
+        <h3>📅 View Bookings</h3>
+        <p>Check scheduled property viewings</p>
+      </div>
+
+      <div class="action-card">
+        <h3>💬 Support Inbox</h3>
+        <p>Handle user queries & tickets</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- SYSTEM STATUS -->
+  <div class="system-status">
+
+    <h2>🟢 System Status</h2>
+
+    <div class="status-item">
+      <span>Server Performance</span>
+      <strong>Good</strong>
+    </div>
+
+    <div class="status-item">
+      <span>Database Health</span>
+      <strong>Stable</strong>
+    </div>
+
+    <div class="status-item">
+      <span>API Response Time</span>
+      <strong>120ms</strong>
+    </div>
+
+    <div class="status-item">
+      <span>Active Sessions</span>
+      <strong>312 users online</strong>
+    </div>
+
+  </div>
+
+  <!-- INSIGHTS -->
+  <div class="insights-box">
+
+    <h2>📊 Platform Insights</h2>
+
+    <p>
+      Property demand has increased significantly in Dubai and Paris regions.
+      User engagement is highest between 6 PM – 10 PM.
+      Luxury villa listings are generating 23% more inquiries compared to last month.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- ==== USER MANAGEMENT ==== -->
+
+<section id="users" class="page">
+
+  <!-- HEADER -->
+  <div class="page-header">
+    <h1>👥 User Management</h1>
+    <p>Manage all registered users, roles, and account status.</p>
+  </div>
+
+  <!-- ACTION BAR -->
+  <div class="user-actions">
+
+    <input type="text" placeholder="Search users...">
+
+    <select>
+      <option>All Roles</option>
+      <option>User</option>
+      <option>Agent</option>
+      <option>Admin</option>
+    </select>
+
+    <select>
+      <option>All Status</option>
+      <option>Active</option>
+      <option>Blocked</option>
+    </select>
+
+    <button class="primary">➕ Add User</button>
+
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="user-summary">
+
+    <div class="summary-card">
+      <h3>1,248</h3>
+      <p>Total Users</p>
+    </div>
+
+    <div class="summary-card">
+      <h3>1,102</h3>
+      <p>Active Users</p>
+    </div>
+
+    <div class="summary-card">
+      <h3>146</h3>
+      <p>Blocked Users</p>
+    </div>
+
+    <div class="summary-card">
+      <h3>38</h3>
+      <p>Agents</p>
+    </div>
+
+  </div>
+
+  <!-- USER TABLE -->
+  <div class="user-table">
+
+    <!-- HEADER -->
+    <div class="table-row table-head">
+      <span>User</span>
+      <span>Email</span>
+      <span>Role</span>
+      <span>Status</span>
+      <span>Actions</span>
+    </div>
+
+    <!-- ROW 1 -->
+    <div class="table-row">
+      <span>John Smith</span>
+      <span>john@example.com</span>
+      <span class="role user">User</span>
+      <span class="status active">Active</span>
+      <span class="actions">
+        <button>View</button>
+        <button class="warn">Block</button>
+      </span>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="table-row">
+      <span>Emily Johnson</span>
+      <span>emily@luxury.com</span>
+      <span class="role agent">Agent</span>
+      <span class="status active">Active</span>
+      <span class="actions">
+        <button>View</button>
+        <button class="warn">Block</button>
+      </span>
+    </div>
+
+    <!-- ROW 3 -->
+    <div class="table-row">
+      <span>Michael Brown</span>
+      <span>michael@luxury.com</span>
+      <span class="role admin">Admin</span>
+      <span class="status blocked">Blocked</span>
+      <span class="actions">
+        <button>View</button>
+        <button class="success">Unblock</button>
+      </span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="properties" class="page">
+
+  <!-- HEADER -->
+  <div class="page-header">
+    <h1>🏡 Property Management</h1>
+    <p>Manage all property listings, approvals, and visibility across the platform.</p>
+  </div>
+
+  <!-- ACTION BAR -->
+  <div class="property-actions">
+
+    <input type="text" placeholder="Search properties...">
+
+    <select>
+      <option>All Status</option>
+      <option>Pending</option>
+      <option>Approved</option>
+      <option>Rejected</option>
+    </select>
+
+    <select>
+      <option>All Categories</option>
+      <option>Luxury Villa</option>
+      <option>Beachfront</option>
+      <option>City Apartment</option>
+    </select>
+
+    <button class="primary">➕ Add Property</button>
+
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="property-summary">
+
+    <div class="summary-card">
+      <h3>356</h3>
+      <p>Total Properties</p>
+    </div>
+
+    <div class="summary-card">
+      <h3>42</h3>
+      <p>Pending Approval</p>
+    </div>
+
+    <div class="summary-card">
+      <h3>298</h3>
+      <p>Approved</p>
+    </div>
+
+    <div class="summary-card">
+      <h3>16</h3>
+      <p>Rejected</p>
+    </div>
+
+  </div>
+
+  <!-- PROPERTY GRID -->
+  <div class="property-grid">
+
+    <!-- CARD 1 -->
+    <div class="property-card">
+
+      <img src="images/villa1.webp" alt="">
+
+      <div class="property-info">
+
+        <h3>Villa Riviera</h3>
+        <p>Paris, France</p>
+
+        <div class="tags">
+          <span class="tag pending">Pending</span>
+          <span class="tag luxury">Luxury Villa</span>
+        </div>
+
+        <p class="meta">
+          Owner: John Smith <br>
+          Submitted: 2 days ago
+        </p>
+
+        <div class="property-actions-box">
+
+          <button class="view">View</button>
+          <button class="approve">Approve</button>
+          <button class="reject">Reject</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="property-card">
+
+      <img src="images/villa13.webp" alt="">
+
+      <div class="property-info">
+
+        <h3>Dubai Palm Estate</h3>
+        <p>Dubai, UAE</p>
+
+        <div class="tags">
+          <span class="tag approved">Approved</span>
+          <span class="tag waterfront">Waterfront</span>
+        </div>
+
+        <p class="meta">
+          Owner: Emily Johnson <br>
+          Listed: 10 days ago
+        </p>
+
+        <div class="property-actions-box">
+
+          <button class="view">View</button>
+          <button class="disable">Disable</button>
+          <button class="edit">Edit</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="property-card">
+
+      <img src="images/villa2.webp" alt="">
+
+      <div class="property-info">
+
+        <h3>Amalfi Coast Villa</h3>
+        <p>Italy</p>
+
+        <div class="tags">
+          <span class="tag rejected">Rejected</span>
+          <span class="tag beach">Beachfront</span>
+        </div>
+
+        <p class="meta">
+          Owner: Michael Brown <br>
+          Reason: Price mismatch
+        </p>
+
+        <div class="property-actions-box">
+
+          <button class="view">View</button>
+          <button class="relist">Re-list</button>
+          <button class="delete">Delete</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===== TRANSACTION MODULE ====== -->
+
+<section id="transactions" class="page">
+
+  <!-- HEADER -->
+  <div class="page-header">
+    <h1>💰 Transactions & Revenue</h1>
+    <p>Track payments, commissions, refunds, and financial activity across the platform.</p>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="transaction-actions">
+
+    <input type="text" placeholder="Search transactions...">
+
+    <select>
+      <option>All Status</option>
+      <option>Completed</option>
+      <option>Pending</option>
+      <option>Failed</option>
+      <option>Refunded</option>
+    </select>
+
+    <select>
+      <option>All Types</option>
+      <option>Property Purchase</option>
+      <option>Booking Fee</option>
+      <option>Commission</option>
+      <option>Refund</option>
+    </select>
+
+    <button class="primary">📄 Export Report</button>
+
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="transaction-summary">
+
+    <div class="summary-card">
+      <h3>$4.2M</h3>
+      <p>Total Revenue</p>
+    </div>
+
+    <div class="summary-card">
+      <h3>$320K</h3>
+      <p>Commission Earned</p>
+    </div>
+
+    <div class="summary-card">
+      <h3>1,248</h3>
+      <p>Total Transactions</p>
+    </div>
+
+    <div class="summary-card">
+      <h3>$18K</h3>
+      <p>Refunded Amount</p>
+    </div>
+
+  </div>
+
+  <!-- TABLE -->
+  <div class="transaction-table">
+
+    <!-- HEADER -->
+    <div class="table-row table-head">
+      <span>ID</span>
+      <span>User</span>
+      <span>Type</span>
+      <span>Amount</span>
+      <span>Status</span>
+      <span>Date</span>
+      <span>Actions</span>
+    </div>
+
+    <!-- ROW 1 -->
+    <div class="table-row">
+      <span>#TXN1021</span>
+      <span>John Smith</span>
+      <span>Property Purchase</span>
+      <span>$18,500,000</span>
+      <span class="status completed">Completed</span>
+      <span>29 Jun 2026</span>
+      <span><button>View</button></span>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="table-row">
+      <span>#TXN1022</span>
+      <span>Emily Johnson</span>
+      <span>Booking Fee</span>
+      <span>$50,000</span>
+      <span class="status pending">Pending</span>
+      <span>28 Jun 2026</span>
+      <span><button>View</button></span>
+    </div>
+
+    <!-- ROW 3 -->
+    <div class="table-row">
+      <span>#TXN1023</span>
+      <span>Michael Brown</span>
+      <span>Refund</span>
+      <span>$18,000</span>
+      <span class="status refunded">Refunded</span>
+      <span>27 Jun 2026</span>
+      <span><button>View</button></span>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ====== MARKETING & PROMOTION ====== -->
+
+<section id="marketing" class="page">
+
+  <!-- HEADER -->
+  <div class="page-header">
+    <h1>📢 Marketing & Promotions</h1>
+    <p>Manage campaigns, featured listings, banners, and promotional performance.</p>
+  </div>
+
+  <!-- QUICK STATS -->
+  <div class="marketing-summary">
+
+    <div class="summary-card">
+      <h3>18</h3>
+      <p>Active Campaigns</p>
+    </div>
+
+    <div class="summary-card">
+      <h3>2.4M</h3>
+      <p>Impressions</p>
+    </div>
+
+    <div class="summary-card">
+      <h3>48K</h3>
+      <p>Clicks</p>
+    </div>
+
+    <div class="summary-card">
+      <h3>3.8%</h3>
+      <p>Conversion Rate</p>
+    </div>
+
+  </div>
+
+  <!-- ACTION BAR -->
+  <div class="marketing-actions">
+
+    <button class="primary">➕ New Campaign</button>
+    <button class="secondary">🖼 Manage Banners</button>
+    <button class="secondary">📧 Email Blast</button>
+    <button class="secondary">🏡 Featured Properties</button>
+
+  </div>
+
+  <!-- CAMPAIGN LIST -->
+  <div class="campaign-grid">
+
+    <!-- CARD 1 -->
+    <div class="campaign-card">
+
+      <h3>Luxury Villa Dubai Push</h3>
+
+      <div class="campaign-meta">
+        <span class="tag active">Active</span>
+        <span>Budget: $50,000</span>
+      </div>
+
+      <p>
+        Targeting high-net-worth users in UAE & Europe for premium villa listings.
+      </p>
+
+      <div class="progress">
+        <div class="bar" style="width: 70%"></div>
+      </div>
+
+      <div class="campaign-stats">
+        <span>CTR: 4.2%</span>
+        <span>Leads: 1,240</span>
+      </div>
+
+      <div class="campaign-actions">
+        <button>View</button>
+        <button class="secondary">Edit</button>
+        <button class="danger">Pause</button>
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="campaign-card">
+
+      <h3>Europe Luxury Email Blast</h3>
+
+      <div class="campaign-meta">
+        <span class="tag scheduled">Scheduled</span>
+        <span>Budget: $12,000</span>
+      </div>
+
+      <p>
+        Email campaign targeting investors interested in French and Italian villas.
+      </p>
+
+      <div class="progress">
+        <div class="bar" style="width: 30%"></div>
+      </div>
+
+      <div class="campaign-stats">
+        <span>Open Rate: 38%</span>
+        <span>Clicks: 5,600</span>
+      </div>
+
+      <div class="campaign-actions">
+        <button>View</button>
+        <button class="secondary">Edit</button>
+        <button class="danger">Cancel</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BANNERS SECTION -->
+  <div class="banner-section">
+
+    <h2>🖼 Active Banners</h2>
+
+    <div class="banner-grid">
+
+      <div class="banner-card">
+        <img src="images/villa10.webp" alt="">
+        <p>Dubai Luxury Villas Promo</p>
+        <button>Edit</button>
+      </div>
+
+      <div class="banner-card">
+        <img src="images/villa4.webp" alt="">
+        <p>Beachfront Estates Campaign</p>
+        <button>Edit</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- INSIGHTS -->
+  <div class="marketing-insights">
+
+    <h2>📊 Campaign Insights</h2>
+
+    <p>
+      Dubai campaigns are generating the highest ROI with strong conversion rates.
+      Email marketing performs better in Europe compared to paid ads.
+      Featured property placements increase engagement by 32%.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- ========= SETTINGS MODULE ========= -->
+
+<section id="settings" class="page">
+
+  <!-- HEADER -->
+  <div class="page-header">
+    <h1>⚙ System Settings</h1>
+    <p>Manage platform configuration, security, and user experience settings.</p>
+  </div>
+
+  <!-- SETTINGS GRID -->
+  <div class="settings-grid">
+
+    <!-- ACCOUNT SECURITY -->
+    <div class="settings-card">
+
+      <h2>🔒 Security</h2>
+
+      <div class="setting-item">
+        <label>Change Admin Password</label>
+        <input type="password" placeholder="New password">
+      </div>
+
+      <div class="setting-item">
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Confirm password">
+      </div>
+
+      <div class="setting-item">
+        <label>Two-Factor Authentication</label>
+        <select>
+          <option>Disabled</option>
+          <option>Enabled</option>
+        </select>
+      </div>
+
+      <div class="toggle-item">
+        <p>Login Alerts</p>
+        <input type="checkbox" checked>
+      </div>
+
+      <div class="toggle-item">
+        <p>Suspicious Login Detection</p>
+        <input type="checkbox" checked>
+      </div>
+
+    </div>
+
+    <!-- NOTIFICATIONS -->
+    <div class="settings-card">
+
+      <h2>🔔 Notifications</h2>
+
+      <div class="toggle-item">
+        <p>Email Notifications</p>
+        <input type="checkbox" checked>
+      </div>
+
+      <div class="toggle-item">
+        <p>SMS Alerts</p>
+        <input type="checkbox">
+      </div>
+
+      <div class="toggle-item">
+        <p>New User Alerts</p>
+        <input type="checkbox" checked>
+      </div>
+
+      <div class="toggle-item">
+        <p>New Property Submissions</p>
+        <input type="checkbox" checked>
+      </div>
+
+      <div class="toggle-item">
+        <p>System Maintenance Alerts</p>
+        <input type="checkbox" checked>
+      </div>
+
+    </div>
+
+    <!-- PLATFORM PREFERENCES -->
+    <div class="settings-card">
+
+      <h2>🎯 Preferences</h2>
+
+      <div class="setting-item">
+        <label>Default Currency</label>
+        <select>
+          <option>USD ($)</option>
+          <option>EUR (€)</option>
+          <option>INR (₹)</option>
+        </select>
+      </div>
+
+      <div class="setting-item">
+        <label>Language</label>
+        <select>
+          <option>English</option>
+          <option>French</option>
+          <option>Arabic</option>
+        </select>
+      </div>
+
+      <div class="setting-item">
+        <label>Time Zone</label>
+        <select>
+          <option>GMT +5:30 (India)</option>
+          <option>GMT +1 (Europe)</option>
+          <option>GMT +4 (UAE)</option>
+        </select>
+      </div>
+
+      <div class="setting-item">
+        <label>Theme Mode</label>
+        <select>
+          <option>Dark</option>
+          <option>Light</option>
+        </select>
+      </div>
+
+    </div>
+
+    <!-- SYSTEM CONTROL -->
+    <div class="settings-card">
+
+      <h2>🛠 System Control</h2>
+
+      <div class="toggle-item">
+        <p>Maintenance Mode</p>
+        <input type="checkbox">
+      </div>
+
+      <div class="toggle-item">
+        <p>Allow New Registrations</p>
+        <input type="checkbox" checked>
+      </div>
+
+      <div class="toggle-item">
+        <p>Auto Backup System</p>
+        <input type="checkbox" checked>
+      </div>
+
+      <div class="toggle-item">
+        <p>Debug Mode</p>
+        <input type="checkbox">
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ACTION BUTTONS -->
+  <div class="settings-actions">
+
+    <button class="primary">💾 Save Changes</button>
+    <button class="secondary">🔄 Reset Defaults</button>
+    <button class="danger">⚠ Reset System</button>
+
+  </div>
+
+</section>
+
+</main>
+
+
+
+<script>
+function logout(){
+  localStorage.removeItem("currentUser");
+  window.location.href = "index.html";
+}
+</script>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Stackly Luxury Villas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="auth/auth.css">
+    <script src="auth/auth.js" defer></script>
+</head>
+
+<body>
+
+<!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <svg class="loader-logo" viewBox="0 0 50 50">
+                <circle class="emblem-outer" cx="25" cy="25" r="23"/>
+                <circle class="emblem-inner" cx="25" cy="25" r="8"/>
+                <polygon class="emblem-diamond" points="25,5 45,25 25,45 5,25"/>
+            </svg>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <img src="images/stackly_logo.webp" alt="Stackly Luxury Villas" class="logo-img">
+            </a>
+
+            <div class="nav-orbital">
+                <ul class="nav-links">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            Home
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="villas.html" class="nav-link">
+                            Villas
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">
+                            About
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">
+                            Services
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">
+                            Contact
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                </ul>
+
+                <a onclick="openAuth()" class="nav-cta">
+                    <span>Book Viewing</span>
+                    <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+            </button>
+        </div>
+    </nav>
+
+<!-- HERO -->
+<section class="contact-hero">
+    <div class="hero-content">
+        <h1>Let's Start a <span>Conversation</span></h1>
+        <p>Luxury property assistance available 24/7</p>
+    </div>
+</section>
+
+<!-- QUICK ACTIONS -->
+<section class="quick-actions">
+    <a href="tel:+33142686868" class="action-card">📞 Call Now</a>
+    <a href="mailto:contact@elysee-villas.com" class="action-card">✉ Email Us</a>
+    <a href="#" class="action-card">💬 WhatsApp</a>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-main">
+
+    <!-- INFO -->
+    <div class="contact-info">
+        <h2>Contact Information</h2>
+
+        <div class="info-card">
+            <h3>📍 Address</h3>
+            <p>42 Avenue Montaigne, Paris, France</p>
+        </div>
+
+        <div class="info-card">
+            <h3>📞 Phone</h3>
+            <p>+33 1 42 68 68 68</p>
+        </div>
+
+        <div class="info-card">
+            <h3>✉ Email</h3>
+            <p>contact@elysee-villas.com</p>
+        </div>
+
+        <div class="info-card">
+            <h3>⏰ Working Hours</h3>
+            <p>Mon - Sun: 9AM - 9PM</p>
+        </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="contact-form">
+        <h2>Send a Message</h2>
+
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <input type="tel" id="phone" placeholder="Phone Number">
+            <select id="service">
+                <option value="">Select Service</option>
+                <option>Property Buying</option>
+                <option>Property Selling</option>
+                <option>Investment Advice</option>
+                <option>Concierge Service</option>
+            </select>
+
+            <textarea id="message" placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+            <p id="formMsg"></p>
+        </form>
+    </div>
+
+</section>
+
+<!-- MAP -->
+<section class="map-section">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18..."
+        loading="lazy">
+    </iframe>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <div class="faq-question">How fast do you respond?</div>
+        <div class="faq-answer">Within 24 hours for all inquiries.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Do you handle international clients?</div>
+        <div class="faq-answer">Yes, we operate globally.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Do you offer private viewings?</div>
+        <div class="faq-answer">Yes, fully private and exclusive tours.</div>
+    </div>
+</section>
+
+<!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <svg class="footer-logo-emblem" viewBox="0 0 50 50">
+                        <circle class="emblem-outer" cx="25" cy="25" r="23" fill="none" stroke="#c9a962" stroke-width="1.5"/>
+                        <circle class="emblem-inner" cx="25" cy="25" r="8" fill="#c9a962"/>
+                        <polygon class="emblem-diamond" points="25,5 45,25 25,45 5,25" fill="none" stroke="#c9a962" stroke-width="1"/>
+                    </svg>
+                    <span class="footer-logo-text">Stackly</span>
+                </div>
+                <p class="footer-description">
+                    Curating the world's most exceptional luxury villas and estates 
+                    for discerning individuals since 1987.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="villas.html">Properties</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Destinations</h4>
+                <ul class="footer-links">
+                    <li><a href="#">French Riviera</a></li>
+                    <li><a href="#">Italian Coast</a></li>
+                    <li><a href="#">Greek Islands</a></li>
+                    <li><a href="#">Caribbean</a></li>
+                    <li><a href="#">Dubai</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li>42 Avenue Montaigne</li>
+                    <li>75008 Paris, France</li>
+                    <li><a href="tel:+33142686868">+33 1 42 68 68 68</a></li>
+                    <li><a href="mailto:contact@elysee-villas.com">contact@elysee-villas.com</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copyright">
+                © 2024 Stackly Villas. All rights reserved.
+            </p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+<script src="js/common.js"></script>
+<script src="js/contact.js"></script>
+
+</body>
+</html>
