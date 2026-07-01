@@ -1,3 +1,12 @@
+:root {
+    --black: #070707;        /* deeper black */
+    --charcoal: #121212;     /* clearer separation */
+    --charcoal-2: #1a1a1a;   /* NEW layer */
+    --gold: #d4af37;
+    --text-muted: rgba(255,255,255,0.82);
+}
+
+
 .logo{
     display: flex;
     align-items: center;
@@ -47,9 +56,11 @@
     position: relative;
 }
 
-.hero-split.left {
+.hero-split.left{
     background: var(--black);
-    padding: 120px 60px;
+    padding: 120px 80px;
+    display: flex;
+    align-items: center;
 }
 
 .hero-split.right {
@@ -120,6 +131,10 @@
     height: 100%;
 }
 
+.hero-split.right {
+    background: var(--black);
+}
+
 .hero-image {
     width: 100%;
     height: 100%;
@@ -134,6 +149,25 @@
     bottom: 40px;
     border: 1px solid var(--gold);
     pointer-events: none;
+}
+
+.hero-split.right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+}
+
+.hero-image-container{
+    width: 75%;
+    height: 75%;
+    position: relative;
+}
+
+.hero-image-container{
+    width: 70%;
+    height: 70%;
+    transform: translateY(10px);
 }
 
 .scroll-down {
@@ -976,4 +1010,77 @@
     .stat-block .stat-number {
         font-size: 3.5rem;
     }
+}
+
+
+
+/* =================================== */
+.story-section {
+    background: var(--black);
+}
+
+.timeline-section {
+    background: var(--charcoal-2);
+}
+
+.values-section {
+    background: var(--black);
+}
+
+.property-showcase {
+    background: var(--charcoal);
+}
+
+.how-we-work {
+    background: var(--charcoal-2);
+}
+
+.team-section {
+    background: var(--black);
+}
+
+.testimonials-section {
+    background: var(--charcoal-2);
+}
+
+/*  */
+.story-text,
+.timeline-text,
+.value-text,
+.process-text,
+.testimonial-text {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/*  */
+.property-card {
+    background: #161616;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+.value-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.process-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.testimonial-card {
+    background: #151515;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/*  */
+.hero-split.left {
+    background: linear-gradient(135deg, #000000, #0b0b0b);
+}
+
+.hero-label,
+.timeline-year,
+.value-number,
+.process-number {
+    color: #f5d77a;
 }

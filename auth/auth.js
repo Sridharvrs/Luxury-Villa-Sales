@@ -35,8 +35,8 @@ function initAuth() {
 
   // ================= PASSWORD VALIDATION =================
   function validatePassword(p) {
-    return /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&]).{8,}$/.test(p);
-  }
+  return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(p);
+}
 
   function bindHint(inputId, hintId) {
     const input = document.getElementById(inputId);
@@ -113,7 +113,7 @@ document.getElementById("loginBtn").addEventListener("click", () => {
 
     // Validate password strength
     if (!validatePassword(password)) {
-        hint.textContent = "Password must contain at least 8 characters, one letter, one number, and one special symbol.";
+        hint.textContent ="Password must be 8+ chars with uppercase, lowercase, number & symbol.";
         hint.style.color = "#ff4d4d";
         return;
     }

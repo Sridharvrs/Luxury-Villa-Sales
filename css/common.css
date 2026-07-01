@@ -75,7 +75,7 @@ button {
     z-index: 1000;
     padding: 20px 60px;
     transition: var(--transition-smooth);
-    background-color: #0a0a0a;
+    background-color: #000000;
 }
 
 .navbar.scrolled {
@@ -314,6 +314,25 @@ button {
 
 .mobile-toggle.active .toggle-line:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.mobile-toggle .toggle-line{
+    width: 28px;
+    height: 2px;
+    background: var(--gold);
+    display: block;
+    transition: 0.4s ease;
+    transform-origin: center;
+}
+
+.accordion-toggle .toggle-line{
+    position: absolute;
+    background: var(--gold);
+}
+
+/* isolate navbar toggle ONLY */
+.mobile-toggle .toggle-line{
+    position: relative;
 }
 
 /* Mobile Navigation */

@@ -1,3 +1,11 @@
+:root {
+  --black: #0b0f14;
+  --charcoal: #111823;
+  --section-dark: #0f141c;
+  --section-alt: #0c1118;
+  --gold: #c9a962;
+}
+
 /* ============================================
    HOME PAGE - CINEMATIC HERO DESIGN
    ============================================ */
@@ -377,23 +385,27 @@
     grid-row: span 2;
 }
 
+
+
 .card-image {
     position: relative;
-    height: 300px;
+    width: 100%;
+    aspect-ratio: 4 / 3;   /* 🔥 keeps all images same shape */
     overflow: hidden;
 }
 
-.featured-large .card-image {
-    height: 100%;
-    min-height: 500px;
-}
 
 .card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.8s ease;
+    display: block;
+
+    transform: scale(1);
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); /* smooth luxury easing */
+    will-change: transform; /* GPU optimization */
 }
+
 
 .featured-card:hover .card-image img {
     transform: scale(1.1);
@@ -529,32 +541,94 @@ LIFESTYLE GALLERY
 }
 
 .lifestyle-grid{
-
     max-width:1400px;
     margin:70px auto 0;
 
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    grid-auto-rows:320px;
-    gap:25px;
-
+    column-count: 3;
+    column-gap: 25px;
 }
 
 .lifestyle-card{
+    break-inside: avoid;
+    margin-bottom: 25px;
 
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+
+    border:1px solid rgba(201,169,98,.15);
+    transition:.6s ease;
+
+    height: 320px; /* base height */
+}
+
+/* different natural heights */
+.lifestyle-card:nth-child(1){ height: 420px; }
+.lifestyle-card:nth-child(2){ height: 300px; }
+.lifestyle-card:nth-child(3){ height: 360px; }
+.lifestyle-card:nth-child(4){ height: 280px; }
+.lifestyle-card:nth-child(5){ height: 340px; }
+.lifestyle-card:nth-child(6){ height: 460px; }
+
+/* ====== */
+/* base card */
+.lifestyle-card{
     position:relative;
     overflow:hidden;
     cursor:pointer;
     border:1px solid rgba(201,169,98,.15);
     transition:.6s ease;
-
 }
 
-.lifestyle-card.large{
-
-    grid-column:span 2;
-
+/* IMAGE */
+.lifestyle-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:1s ease;
 }
+
+/* =========================
+   NEW ASYMMETRIC LAYOUT
+========================= */
+
+/* Big hero left */
+.lifestyle-card:nth-child(1){
+    grid-column:span 6;
+    grid-row:span 3;
+}
+
+/* medium top right */
+.lifestyle-card:nth-child(2){
+    grid-column:span 3;
+    grid-row:span 2;
+}
+
+/* medium middle right */
+.lifestyle-card:nth-child(3){
+    grid-column:span 3;
+    grid-row:span 2;
+}
+
+/* wide center feature */
+.lifestyle-card:nth-child(4){
+    grid-column:span 4;
+    grid-row:span 2;
+}
+
+/* small accent */
+.lifestyle-card:nth-child(5){
+    grid-column:span 4;
+    grid-row:span 2;
+}
+
+/* big hero bottom */
+.lifestyle-card:nth-child(6){
+    grid-column:span 12;
+    grid-row:span 3;
+}
+/* ====== */
+
 
 .lifestyle-card img{
 
@@ -659,22 +733,50 @@ LIFESTYLE GALLERY
 
 }
 
+/* -------- */
+@media(max-width:992px){
+.lifestyle-grid{
+    column-count: 2;
+}
+}
+
+@media(max-width:768px){
+.lifestyle-grid{
+    column-count: 1;
+}
+}
+
+
 /* Tablet */
 
 @media(max-width:992px){
 
 .lifestyle-grid{
-
-grid-template-columns:repeat(2,1fr);
-
+    grid-template-columns:repeat(6, 1fr);
+    grid-auto-rows:140px;
 }
 
-.lifestyle-card.large{
-
-grid-column:span 2;
-
+.lifestyle-card:nth-child(1){
+    grid-column:span 6;
+    grid-row:span 2;
 }
 
+.lifestyle-card:nth-child(2),
+.lifestyle-card:nth-child(3){
+    grid-column:span 3;
+    grid-row:span 2;
+}
+
+.lifestyle-card:nth-child(4),
+.lifestyle-card:nth-child(5){
+    grid-column:span 3;
+    grid-row:span 2;
+}
+
+.lifestyle-card:nth-child(6){
+    grid-column:span 6;
+    grid-row:span 2;
+}
 }
 
 /* Mobile */
@@ -682,34 +784,16 @@ grid-column:span 2;
 @media(max-width:768px){
 
 .lifestyle-grid{
-
-grid-template-columns:1fr;
-
-grid-auto-rows:260px;
-
+    grid-template-columns:1fr;
+    grid-auto-rows:260px;
+    gap:18px;
 }
 
-.lifestyle-card.large{
-
-grid-column:span 1;
-
+.lifestyle-card{
+    grid-column:span 1 !important;
+    grid-row:span 1 !important;
 }
-
-.lifestyle-overlay{
-
-left:20px;
-bottom:20px;
-
 }
-
-.lifestyle-overlay span{
-
-font-size:1.3rem;
-
-}
-
-}
-
 
 /*========================== Experience Section ================================*/
 .experience-section {
@@ -1162,10 +1246,6 @@ font-size:3rem;
 
 
 
-
-
-
-
 /* Responsive Styles */
 @media (max-width: 1200px) {
     .hero-title {
@@ -1247,4 +1327,34 @@ font-size:3rem;
     .cta-title {
         font-size: 2.5rem;
     }
+}
+
+
+/* ==================== */
+.hero {
+  background: var(--black);
+}
+
+.featured-section {
+  background: var(--section-dark);
+}
+
+.lifestyle-section {
+  background: var(--section-alt);
+}
+
+.experience-section {
+  background: var(--black);
+}
+
+.testimonials-section {
+  background: var(--section-dark);
+}
+
+.cta-overlay {
+  background: rgba(0, 0, 0, 0.88);
+}
+
+.luxury-stats {
+  background: var(--section-alt);
 }

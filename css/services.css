@@ -1,3 +1,8 @@
+:root {
+    --bg-dark: #0b0b0b;
+    --bg-soft: #111111;
+}
+
 /* ============================================
    SERVICES PAGE - ACCORDION DESIGN
    ============================================ */
@@ -792,4 +797,15 @@
     .cta-buttons {
         flex-direction: column;
     }
+}
+
+
+/* ============================ */
+.services-hero,
+.trust-section,
+.featured-properties,
+.services-accordion,
+.process-section,
+.concierge-section {
+    background: radial-gradient(circle at top, #111 0%, #070707 100%);
 }

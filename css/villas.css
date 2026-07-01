@@ -1439,3 +1439,74 @@ text-align:center;
         height: 250px;
     }
 }
+
+
+/* ========================= */
+/* =========================
+   GLOBAL SECTION VISIBILITY FIX
+========================= */
+
+.section {
+    padding: 100px 60px;
+    position: relative;
+}
+
+/* Alternate section backgrounds */
+.section:nth-of-type(even) {
+    background: #0d0d0d;   /* deep black */
+}
+
+.section:nth-of-type(odd) {
+    background: #141414;   /* slightly lighter for contrast */
+}
+
+/* Add subtle top glow separator */
+.section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(201,169,98,0.4),
+        transparent
+    );
+}
+
+/*  */
+.invest-card,
+.compare-card,
+.villa-card {
+    background: #1c1c1c;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+p {
+    color: rgba(255,255,255,0.75);
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+}
+
+.muted,
+.section-description {
+    color: rgba(255,255,255,0.6);
+}
+
+.section {
+    background: radial-gradient(
+        circle at top,
+        rgba(201,169,98,0.05),
+        transparent 60%
+    );
+}
+
+.masonry-grid {
+    padding: 40px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 20px;
+}
