@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 - Page Not Found | Stackly Luxury Villas</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#1b140e,#2e2117,#120d09);
+    overflow:hidden;
+    position:relative;
+}
+
+/* Background Glow */
+
+body::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    border-radius:50%;
+    background:radial-gradient(circle,#d4af37 0%,transparent 70%);
+    opacity:.08;
+}
+
+/* Floating circles */
+
+.circle{
+    position:absolute;
+    border:1px solid rgba(212,175,55,.15);
+    border-radius:50%;
+    animation:float 12s linear infinite;
+}
+
+.circle:nth-child(1){
+    width:250px;
+    height:250px;
+    left:-70px;
+    top:60px;
+}
+
+.circle:nth-child(2){
+    width:180px;
+    height:180px;
+    right:80px;
+    bottom:80px;
+    animation-duration:15s;
+}
+
+@keyframes float{
+    50%{
+        transform:translateY(-25px) rotate(15deg);
+    }
+}
+
+.container{
+    text-align:center;
+    max-width:700px;
+    padding:40px;
+    z-index:5;
+}
+
+.error{
+    font-size:170px;
+    font-family:'Cinzel',serif;
+    font-weight:700;
+    color:#d4af37;
+    line-height:1;
+    text-shadow:0 0 25px rgba(212,175,55,.35);
+}
+
+.icon{
+    font-size:65px;
+    margin:10px 0;
+}
+
+h1{
+    color:#fff;
+    font-size:42px;
+    margin:15px 0;
+    font-family:'Cinzel',serif;
+}
+
+p{
+    color:#ddd;
+    line-height:1.8;
+    font-size:18px;
+    margin-bottom:40px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 35px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.35s;
+}
+
+.home{
+    background:#d4af37;
+    color:#111;
+}
+
+.home:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px rgba(212,175,55,.35);
+}
+
+.contact{
+    border:2px solid #d4af37;
+    color:#d4af37;
+}
+
+.contact:hover{
+    background:#d4af37;
+    color:#111;
+}
+
+@media(max-width:768px){
+
+.error{
+    font-size:120px;
+}
+
+h1{
+    font-size:32px;
+}
+
+p{
+    font-size:16px;
+}
+
+.buttons{
+    flex-direction:column;
+}
+
+.btn{
+    width:100%;
+}
+
+}
+</style>
+</head>
+<body>
+
+<div class="circle"></div>
+<div class="circle"></div>
+
+<div class="container">
+
+<div class="error">404</div>
+
+<div class="icon">🏛️</div>
+
+<h1>This Villa Doesn't Exist</h1>
+
+<p>
+The page you're looking for may have been moved, removed,
+or never existed. Explore our exclusive collection of luxury villas instead.
+</p>
+
+<div class="buttons">
+
+<a onclick="history.back()" class="btn home">
+Back to dashboard
+</a>
+
+<a href="contact.html" class="btn contact">
+Contact Us
+</a>
+
+</div>
+
+</div>
+
+<script src="js/dashboarderror.js"></script>
+
+</body>
+</html>

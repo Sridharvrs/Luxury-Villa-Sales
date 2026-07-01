@@ -81,3 +81,22 @@ menuItems.forEach(item => {
 document.querySelector(".logout").addEventListener("click", () => {
   window.location.href = "index.html";
 });
+
+
+// ======================== 
+const menusItem = document.querySelectorAll(".menu li");
+
+menusItem.forEach(item => {
+    item.addEventListener("click", () => {
+
+        menusItem.forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
+
+        item.scrollIntoView({
+            behavior: "smooth",
+            inline: "center",
+            block: "nearest"
+        });
+
+    });
+});
