@@ -551,7 +551,7 @@ body {
 .role.agent { background: #c9a962; color: #000; }
 .role.admin { background: #ff4d4d; }
 
-.status.active { color: lightgreen; }
+.status.active { color: rgb(32, 36, 32)light; }
 .status.blocked { color: red; }
 
 /* ACTION BUTTONS */
@@ -643,7 +643,7 @@ body {
 }
 
 .pending { background: orange; }
-.approved { background: green; }
+.approved { background: rgb(32, 36, 32); }
 .rejected { background: red; }
 .luxury { background: #c9a962; color: #000; }
 .waterfront { background: #0077ff; }
@@ -667,7 +667,7 @@ body {
 }
 
 /* BUTTON COLORS */
-.approve { background: green; color: #fff; }
+.approve { background: rgb(32, 36, 32); color: #fff; }
 .reject { background: red; color: #fff; }
 .view { background: #222; color: #fff; }
 .disable { background: orange; }
@@ -738,7 +738,7 @@ body {
   text-align: center;
 }
 
-.completed { background: green; color: #fff; }
+.completed { background: rgb(32, 36, 32); color: #fff; }
 .pending { background: orange; }
 .failed { background: red; }
 .refunded { background: #2d6cdf; color: #fff; }
@@ -808,7 +808,7 @@ body {
   border-radius: 20px;
 }
 
-.active { background: green; }
+.active { background: rgb(32, 36, 32); }
 .scheduled { background: orange; }
 
 /* STATS */
