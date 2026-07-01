@@ -78,8 +78,13 @@ button {
     background-color: #000000;
 }
 
+.navbar {
+    background: #1a1612;
+    border-bottom: 1px solid rgba(201, 169, 98, 0.35);
+}
+
 .navbar.scrolled {
-    background: rgba(10, 10, 10, 0.95);
+    background: #1a1612;
     backdrop-filter: blur(20px);
     padding: 15px 60px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
@@ -374,6 +379,53 @@ button {
         padding: 15px 40px;
     }
 }
+
+@media (max-width: 1024px) {
+
+    .nav-orbital {
+        position: fixed;
+        top: 0;
+        right: -60%;          /* hidden state */
+        width: 60%;           /* 👈 half screen */
+        height: 100vh;
+
+        background: #1a1612;
+        border-left: 1px solid rgba(201, 169, 98, 0.25);
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 30px;
+
+        transition: 0.5s ease;
+        z-index: 999;
+    }
+
+    .nav-orbital.active {
+        right: 0;             /* slide in */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        background: transparent;
+        border: none;
+        gap: 25px;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 12px 20px;
+    }
+
+    .nav-cta {
+        margin-top: 20px;
+    }
+}
+
+/* .nav-orbital {
+    backdrop-filter: blur(12px);
+} */
 
 /* ============================================
    COMMON COMPONENTS
