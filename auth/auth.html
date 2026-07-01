@@ -31,7 +31,7 @@
       <div class="password-hint" id="loginHint"></div>
 
       <div class="row">
-        <label><input type="checkbox"> Remember me</label>
+        <label class="remember-label"><input type="checkbox" id="rememberMe"> Remember me</label>
         <a href="error">Forgot Password?</a>
       </div>
 
@@ -47,7 +47,7 @@
 
       <h2>Create Account</h2>
 
-      <input type="text" placeholder="Full Name" id="signupName">
+      <input type="text" placeholder="Full Name" id="signupName" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g,'')">
       <input type="email" placeholder="Email" id="signupEmail">
 
       <div class="password-field">

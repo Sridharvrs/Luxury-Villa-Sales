@@ -69,48 +69,72 @@ function initAuth() {
   });
 
   // ================= SIGNUP (OPTIONAL / FAKE) =================
-  document.querySelector("#signup .btn-auth").addEventListener("click", () => {
 
+document.querySelector("#signup .btn-auth").addEventListener("click", () => {
+
+    const password = document.getElementById("signupPassword").value;
+    const confirmPassword = document.getElementById("signupConfirm").value;
     const hint = document.getElementById("signupHint");
+
+    if (!validatePassword(password)) {
+        hint.style.color = "#ff4d4d";
+        hint.textContent =
+        "Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special symbol.";
+        return;
+    }
+
+    if (password !== confirmPassword) {
+        hint.style.color = "#ff4d4d";
+        hint.textContent = "Passwords do not match.";
+        return;
+    }
 
     hint.style.color = "lightgreen";
     hint.textContent = "Signup not required. You can login directly.";
 
     document.querySelector('[data-tab="login"]').click();
-  });
+});
 
   // ================= LOGIN (OPEN ACCESS SYSTEM) =================
-  document.getElementById("loginBtn").addEventListener("click", () => {
+  // ================= LOGIN (OPEN ACCESS SYSTEM) =================
+document.getElementById("loginBtn").addEventListener("click", () => {
 
     const email = document.getElementById("loginEmail").value.trim();
     const password = document.getElementById("loginPassword").value;
     const role = document.getElementById("loginRole").value;
     const hint = document.getElementById("loginHint");
 
+    // Check empty fields
     if (!email || !password) {
-      hint.textContent = "Please enter email and password";
-      hint.style.color = "#ff4d4d";
-      return;
+        hint.textContent = "Please enter email and password";
+        hint.style.color = "#ff4d4d";
+        return;
     }
 
-    // CREATE FAKE SESSION (NO VALIDATION)
+    // Validate password strength
+    if (!validatePassword(password)) {
+        hint.textContent = "Password must contain at least 8 characters, one letter, one number, and one special symbol.";
+        hint.style.color = "#ff4d4d";
+        return;
+    }
+
+    // CREATE SESSION
     currentUser = {
-      email,
-      role,
-      name: email.split("@")[0] || "User"
+        email,
+        role,
+        name: email.split("@")[0] || "User"
     };
 
     hint.style.color = "lightgreen";
     hint.textContent = "Login successful! Redirecting...";
 
-    // close modal before redirect
     modal.classList.add("hidden");
 
     setTimeout(() => {
-      window.location.href =
-        role === "admin"
-          ? "admin-dashboard.html"
-          : "user-dashboard.html";
+        window.location.href =
+            role === "admin"
+                ? "admin-dashboard.html"
+                : "user-dashboard.html";
     }, 500);
-  });
+});
 }

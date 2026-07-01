@@ -19,9 +19,10 @@
 
 <!-- ================= SIDEBAR ================= -->
 <aside class="sidebar">
-    <div class="logo">
-        <h2>Stackly</h2>
-        <span>Luxury Dashboard</span>
+    <div class="logos">
+        <a href="index.html" class="logo">
+            <img src="images/stackly_logo.webp" alt="Stackly Luxury Villas" class="logo-img">
+        </a>
     </div>
 
     <ul class="menu">
@@ -36,9 +37,15 @@
     </ul>
 </aside>
 
+<div class="sidebar-overlay"></div>
+
 <!-- ================= MAIN AREA ================= -->
 
 <main class="main">
+
+  <button id="menuToggle" class="menu-toggle">
+    ☰
+</button>
 
   <!-- TOP NAVBAR -->
     <header class="topbar">
@@ -712,10 +719,28 @@
 
       <h2>🔒 Security</h2>
 
+      <!--  -->
       <div class="setting-item">
-        <label>Change Password</label>
-        <input type="password" placeholder="New password">
+          <label>Change Password</label>
+
+          <input
+              type="password"
+              id="adminPassword"
+              placeholder="New password"
+          >
+
+          <small class="password-hint">
+             Password must contain at least:
+             <br>• 8 characters
+             <br>• 1 uppercase letter (A-Z)
+             <br>• 1 lowercase letter (a-z)
+             <br>• 1 number (0-9)
+             <br>• 1 special character (!@#$%^&*)
+          </small>
+
+          <span id="passwordError" class="password-error"></span>
       </div>
+      <!--  -->
 
       <div class="setting-item">
         <label>Two-Factor Authentication</label>

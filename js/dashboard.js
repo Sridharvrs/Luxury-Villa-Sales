@@ -100,3 +100,58 @@ menusItem.forEach(item => {
 
     });
 });
+
+// ====================== mobilemenu toggle ======================
+const menuBtn = document.getElementById("menuToggle");
+const sidebar = document.querySelector(".sidebar");
+const overlay = document.querySelector(".sidebar-overlay");
+
+menuBtn.addEventListener("click", () => {
+
+    sidebar.classList.toggle("show");
+    overlay.classList.toggle("show");
+
+    document.body.classList.toggle("no-scroll");
+    document.documentElement.classList.toggle("no-scroll");
+
+});
+
+overlay.addEventListener("click", () => {
+
+    sidebar.classList.remove("show");
+    overlay.classList.remove("show");
+
+    document.body.classList.remove("no-scroll");
+    document.documentElement.classList.remove("no-scroll");
+
+});
+
+
+// ====================================================
+const passwordInput = document.getElementById("adminPassword");
+const passwordError = document.getElementById("passwordError");
+
+const passwordRegex =
+/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&^#()_+\-=\[\]{};':"\\|,.<>\/~`])[A-Za-z\d@$!%*?&^#()_+\-=\[\]{};':"\\|,.<>\/~`]{8,}$/;
+
+passwordInput.addEventListener("input", () => {
+
+    if(passwordInput.value === ""){
+        passwordError.textContent = "";
+        passwordInput.classList.remove("valid","invalid");
+        return;
+    }
+
+    if(passwordRegex.test(passwordInput.value)){
+        passwordError.textContent = "✓ Strong password";
+        passwordError.style.color = "#32cd32";
+        passwordInput.classList.add("valid");
+        passwordInput.classList.remove("invalid");
+    }else{
+        passwordError.textContent =
+        "Password must be at least 8 characters and include uppercase, lowercase, number, and special character.";
+        passwordError.style.color = "#ff4d4d";
+        passwordInput.classList.add("invalid");
+        passwordInput.classList.remove("valid");
+    }
+});
